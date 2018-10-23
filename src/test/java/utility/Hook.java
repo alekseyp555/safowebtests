@@ -22,7 +22,7 @@ public class Hook {
 		driver= new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         System.out.println("--------------------------------------------------");
-		System.out.println(" Starting - " + scenario.getName());
+		System.out.println("Starting - " + scenario.getName());
         System.out.println("--------------------------------------------------");
 	}
 

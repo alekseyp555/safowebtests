@@ -4,7 +4,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
-
 import java.util.concurrent.TimeUnit;
 
 public class SmokeHierarchyLimitTests extends TestBase {
@@ -15,10 +14,9 @@ public class SmokeHierarchyLimitTests extends TestBase {
         waitForPageLoadComplete(driver);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
-        //waitForPageLoadComplete(driver, 30);
         selectPusk(); //клик пуск
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        selectSpravochnik(); //выбор справочники лимиты
+        selectSpravochnik(); //выбор справочники
     }
 
     @Given("Выбрать Иерархия лимитов")
@@ -35,7 +33,7 @@ public class SmokeHierarchyLimitTests extends TestBase {
 
     @Then("загрузились свойства лимитов: Общие, дополнительно")
     public void загрузились_свойства_лимитов_Общие_дополнительно() throws Throwable {
-        driver.findElement(By.xpath("//tbody[6]/tr/td/a/span")).click();
+        driver.findElement(By.xpath("//tbody[6]/tr/td/a/span")).click(); //клик на 6й элемент в таблице "ГСЗ Роснефть"
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }
