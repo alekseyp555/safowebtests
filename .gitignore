@@ -12,3 +12,8 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+.idea/workspace.xml
+target/cucumber/report.js
+target/cucumber/report.js
+.idea/workspace.xml
+.idea/vcs.xml

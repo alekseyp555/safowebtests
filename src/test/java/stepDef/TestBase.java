@@ -9,14 +9,17 @@ import utility.Hook;
 
 public class TestBase {
 
-    private WebDriver driver;
+    protected WebDriver driver;
+
+    public TestBase() {
+        this.driver = Hook.getDriver();
+    }
 
     protected void waitForPageLoadComplete(WebDriver driver) {
         new WebDriverWait(driver,30).until((ExpectedCondition<Boolean>) wd ->
                 ((JavascriptExecutor) driver).executeScript("return document.readyState")
                 .equals("complete"));
     }
-
 
     protected void login() throws Throwable{
         this.driver = Hook.getDriver();
@@ -28,5 +31,13 @@ public class TestBase {
         driver.findElement(By.id("pass")).clear();
         driver.findElement(By.id("pass")).sendKeys("Makaka123");
         driver.findElement(By.xpath("//button")).click();
+    }
+
+    protected void selectSpravochnik() {
+        driver.findElement(By.id("ext-gen143")).click();
+    }
+
+    protected void selectPusk() {
+        driver.findElement(By.xpath("//button[@id='ext-gen14']")).click();
     }
 }
