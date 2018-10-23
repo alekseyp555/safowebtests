@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+group 'safowebtest'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'org.seleniumhq.selenium:selenium-java:3.14.0'
+    compile 'org.testng:testng:6.14.3'
+    compile 'io.cucumber:cucumber-java:4.0.1'
+    compile 'info.cukes:cucumber-java:1.2.5'
+    compile 'io.cucumber:cucumber-testng:4.0.2'
+}
+
+configurations {
+    cucumberRuntime.extendsFrom testRuntime
+}
+
+task cucumber() {
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "cucumber.api.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'src/test/java/stepDef', 'src/test/java/utility', 'src/test/java/features']
+        }
+    }
+}
