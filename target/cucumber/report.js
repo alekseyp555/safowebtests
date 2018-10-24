@@ -1,108 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/features/LoginValid.feature");
-formatter.feature({
-  "name": "Login feature File",
-  "description": "",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "name": "Login scenario for SAFO Web",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@accept"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "navigate to SAFO web page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "LoginValidTests.navigate_to_SAFO_web_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logged using username as \"ABPak@sbfc.ru\" as password \"Makaka123\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "LoginValidTests.user_logged_using_username_as_as_password(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "title SAFO modules page should be displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginValidTests.title_SAFO_modules_page_should_be_displayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.uri("src/test/java/features/SmokeHierarchyLimit.feature");
-formatter.feature({
-  "name": "Тест для тестирования модуля \"Иерархия лимитов\"",
-  "description": "Залогиненный пользователь должен видеть список лимитов\nПри клике на лимит должны отображаться вкладка общие, дополнительно",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "name": "Проверка модуля иерархия лимитов",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@accept"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Выбрать Иерархия лимитов",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "SmokeHierarchyLimitTests.выбрать_Иерархия_лимитов()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "выбрали лимит",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "SmokeHierarchyLimitTests.выбрали_лимит()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "загрузились свойства лимитов: Общие, дополнительно",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "SmokeHierarchyLimitTests.загрузились_свойства_лимитов_Общие_дополнительно()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.uri("src/test/java/features/SmokeModulBusinessProd.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/features/SmokeModulBusinessProd.feature");
 formatter.feature({
   "name": "Тест для тестирования модуля \"Бизнес продукты\"",
   "description": "Залогиненный пользователь должен видеть бизнес продукты\nПри клике на бизнес продут должны загружаться: \"Описание продукта, схема обслуживания, сроки, тарифный план,лимитная политика, верификация",
@@ -115,6 +11,9 @@ formatter.scenario({
   "tags": [
     {
       "name": "@accept"
+    },
+    {
+      "name": "@debug"
     }
   ]
 });

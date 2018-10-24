@@ -47,8 +47,9 @@ public class SmokeModulBusinessProdTests extends TestBase {
     @Then("выбрать Агентский факторинг без права регресса")
     public void выбрать() throws Throwable {
 
-       driver.findElement(By.xpath("//div[3]/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div/div[2]")).click(); //клик по бизнес продукту
-       // driver.findElement(By.xpath("//*[starts-with(@id='ext-gen'}/div[1]/table/tbody/tr/td[1]/div")).click(); //клик по бизнес продукту
+        //driver.findElement(By.xpath("//div[3]/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div/div[2]")).click(); //клик по бизнес продукту
+        driver.findElement(By.cssSelector("div[class*=x-grid3-row]:first-child")).click(); //super locator
+        // driver.findElement(By.xpath("//*[starts-with(@id='ext-gen'}/div[1]/table/tbody/tr/td[1]/div")).click(); //клик по бизнес продукту
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }
@@ -62,6 +63,7 @@ public class SmokeModulBusinessProdTests extends TestBase {
         driver.findElement(By.xpath("//li[3]/a[2]/em/span/span")).click();
         driver.findElement(By.xpath("//li[4]/a[2]")).click();
         driver.findElement(By.xpath("//li[5]/a[2]/em")).click();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         /*driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Описание продукта'])[1]/following::span[2]")).click();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Схема обслуживания'])[1]/following::span[2]")).click();
