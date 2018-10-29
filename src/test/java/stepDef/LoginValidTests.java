@@ -14,7 +14,6 @@ import java.util.concurrent.TimeUnit;
 public class LoginValidTests extends TestBase {
 
     private WebDriver driver;
-
     public LoginValidTests() {
         this.driver = Hook.getDriver();
     }
