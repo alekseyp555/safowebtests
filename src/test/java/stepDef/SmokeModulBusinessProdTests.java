@@ -15,7 +15,7 @@ public class SmokeModulBusinessProdTests extends TestBase {
     public SmokeModulBusinessProdTests () throws Throwable {
         this.driver = Hook.getDriver();
         login();
-        //waitForPageLoadComplete(driver);
+        waitForPageLoadComplete(driver);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }
@@ -35,22 +35,24 @@ public class SmokeModulBusinessProdTests extends TestBase {
 
     @When("выбрать Бизнес-продукты")
     public void выбрать_Бизнес_продукты()throws Throwable {
-        driver.findElement(By.id("ext-gen148")).click(); //Клик на бизес продукты
+        driver.findElement(By.id("ext-comp-1061")).click(); //Клик на бизес продукты
+        //driver.findElement(By.xpath("//div[12]/ul/li/a/span")).click(); //Xpath клик на бизнес продукты
         Thread.sleep(5000);
     }
 
     @Then("страницы с бизнес продуктами загрузилась")
     public void страницы_с_бизнес_продуктами_загрузилась() {
-        waitForPageLoadComplete(driver); //Ждем загрузку бизнес продуктов
+        waitForPageLoadComplete(driver); //Ждем загрузку бизнес продуктов и элементов js
     }
 
     @Then("выбрать Агентский факторинг без права регресса")
     public void выбрать() throws Throwable {
 
         //driver.findElement(By.xpath("//div[3]/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div/div[2]")).click(); //клик по бизнес продукту
-        driver.findElement(By.cssSelector("div[class*=x-grid3-row]:first-child")).click(); //super locator
-        // driver.findElement(By.xpath("//*[starts-with(@id='ext-gen'}/div[1]/table/tbody/tr/td[1]/div")).click(); //клик по бизнес продукту
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")).click(); //выбираем второй элемент в списке БП
+        //driver.findElement(By.cssSelector("div[class*=x-grid3-row]:first-child")).click(); //выбираем первый элемент в списке БП
+        //driver.findElement(By.cssSelector("div[class*=x-grid3-row]:last-child")).click(); //выбираем последний элемент в списке БП
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
     }
 

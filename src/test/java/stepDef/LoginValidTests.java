@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import utility.Hook;
-
 import java.util.concurrent.TimeUnit;
 
 
@@ -21,8 +20,11 @@ public class LoginValidTests extends TestBase {
     }
 
     @Given("navigate to SAFO web page")
-    public void navigate_to_SAFO_web_page() {
+    public void navigate_to_SAFO_web_page() throws Throwable{
         driver.get("http://bugs-kz/login.html");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //Thread.sleep(5000);
+        waitForPageLoadComplete(driver);
     }
 
     @And("^I validate login field$")
@@ -44,7 +46,7 @@ public class LoginValidTests extends TestBase {
         driver.findElement(By.id("pass")).clear();
         driver.findElement(By.id("pass")).sendKeys("Makaka123");
         driver.findElement(By.xpath("//button")).click();
-        //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
         waitForPageLoadComplete(driver);
     }

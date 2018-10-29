@@ -15,7 +15,7 @@ import cucumber.api.CucumberOptions;
 @CucumberOptions(features={"src//test//java//features"}
 					,glue={"stepDef","utility"}
 					,plugin = {"pretty", "html:target/cucumber"}
-					, tags ={"@debug"}
+					, tags ={"@accept"}
 		)
 @Test
 public class RunTest extends AbstractTestNGCucumberTests {

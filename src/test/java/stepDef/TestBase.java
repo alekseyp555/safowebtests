@@ -1,11 +1,16 @@
 package stepDef;
 
+import com.google.common.base.Charsets;
+import com.google.common.io.Resources;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utility.Hook;
+
+import java.io.IOException;
+import java.net.URL;
 
 public class TestBase {
 
@@ -34,10 +39,29 @@ public class TestBase {
     }
 
     protected void selectSpravochnik() {
-        driver.findElement(By.id("ext-gen143")).click();
+        driver.findElement(By.cssSelector("#ext-comp-1059")).click(); //valid id
+        //driver.findElement(By.id("ext-gen110")).click(); //not good xpath locator
+        //driver.findElement(By.cssSelector("[class*=x-menu-list-item]:nth-of-type(6)")); //выбрать справочники
     }
 
     protected void selectPusk() {
-        driver.findElement(By.xpath("//button[@id='ext-gen14']")).click();
+        //driver.findElement(By.xpath("//button[@id='ext-gen14']")).click();
+        driver.findElement(By.cssSelector("#ext-comp-1003")).click(); //valid id
     }
+
+    /*private static void addJQuery (JavascriptExecutor js) {
+
+        String script = "";
+
+        boolean needInjection = (Boolean)(js.executeScript("return this.$ === undefined;"));
+        if(needInjection) {
+            URL u = Resources.getResource("jquery.js");
+            try {
+                script = Resources.toString(u, Charsets.UTF_8);
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+            js.executeScript(script);
+        }
+    }*/
 }

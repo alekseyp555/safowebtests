@@ -1,4 +1,200 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/features/SmokeModulBusinessProd.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/features/ClientManagerPage.feature");
+formatter.feature({
+  "name": "Тест для тестирования модуля \"Клиентский менеджер\"",
+  "description": "Залогиненный пользователь должен видеть список клиентских менеджеров\nПри клике на менеджера должны отображаться связи из САФО\nПри клике на связки BPM/CRM должны отображаться связки в BPM/CRM\nПри клике на контрагента должны отображаться контрагенты",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "Проверка модуля клиентский менеджер",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@accept"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Выбрать клиентский менеджер",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ClientManagerPageTests.выбрать_клиентский_менеджер()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "выбрать менеджера",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "ClientManagerPageTests.выбрать_менеджера()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "загрузились связки из сафо",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ClientManagerPageTests.загрузились_связки_из_сафо()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "клик на связки в BPM/CRM",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "ClientManagerPageTests.клик_на_связки_в_BPM_CRM()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "загрузились связки из BPM/CRM",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ClientManagerPageTests.загрузились_связки_из_BPM_CRM()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "клик на контрагенты",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ClientManagerPageTests.клик_на_контрагенты()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "загрузились контрагенты",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ClientManagerPageTests.загрузились_контрагенты()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("src/test/java/features/LoginValid.feature");
+formatter.feature({
+  "name": "Login feature File",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "Login scenario for SAFO Web",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@accept"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "navigate to SAFO web page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "LoginValidTests.navigate_to_SAFO_web_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user logged using username as \"ABPak@sbfc.ru\" as password \"Makaka123\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "LoginValidTests.user_logged_using_username_as_as_password(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "title SAFO modules page should be displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginValidTests.title_SAFO_modules_page_should_be_displayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("src/test/java/features/SmokeHierarchyLimit.feature");
+formatter.feature({
+  "name": "Тест для тестирования модуля \"Иерархия лимитов\"",
+  "description": "Залогиненный пользователь должен видеть список лимитов\nПри клике на лимит должны отображаться вкладка общие, дополнительно",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "Проверка модуля иерархия лимитов",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@accept"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Выбрать Иерархия лимитов",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "SmokeHierarchyLimitTests.выбрать_Иерархия_лимитов()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "выбрали лимит",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SmokeHierarchyLimitTests.выбрали_лимит()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "загрузились свойства лимитов: Общие, дополнительно",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SmokeHierarchyLimitTests.загрузились_свойства_лимитов_Общие_дополнительно()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("src/test/java/features/SmokeModulBusinessProd.feature");
 formatter.feature({
   "name": "Тест для тестирования модуля \"Бизнес продукты\"",
   "description": "Залогиненный пользователь должен видеть бизнес продукты\nПри клике на бизнес продут должны загружаться: \"Описание продукта, схема обслуживания, сроки, тарифный план,лимитная политика, верификация",
@@ -11,9 +207,6 @@ formatter.scenario({
   "tags": [
     {
       "name": "@accept"
-    },
-    {
-      "name": "@debug"
     }
   ]
 });
@@ -32,7 +225,7 @@ formatter.result({
 });
 formatter.step({
   "name": "выбрать справочники",
-  "keyword": "And "
+  "keyword": "When "
 });
 formatter.match({
   "location": "SmokeModulBusinessProdTests.выбрать_справочники()"
@@ -42,7 +235,7 @@ formatter.result({
 });
 formatter.step({
   "name": "выбрать Бизнес-продукты",
-  "keyword": "When "
+  "keyword": "And "
 });
 formatter.match({
   "location": "SmokeModulBusinessProdTests.выбрать_Бизнес_продукты()"
