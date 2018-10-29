@@ -54,11 +54,11 @@ public class ContrAgentsTests extends TestBase{
 
     @Then("Клик Общие сведения, Дополнительно, Лимиты, Договора, Банковские реквизиты контрагента")
     public void клик_Общие_сведения_Дополнительно_Лимиты_Договора_Банковские_реквизиты_контрагента() {
-      /*  driver.findElement(By.xpath("//span/span")).click();
-        driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click();
-        driver.findElement(By.xpath("//li[3]/a[2]/em/span/span")).click();
-        driver.findElement(By.xpath("//li[4]/a[2]")).click();
-        driver.findElement(By.xpath("//li[5]/a[2]/em")).click();
+        driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click(); //Клик на Дополнительно
+        driver.findElement(By.xpath("//li[4]/a[2]")).click(); // Клик на Лимиты
+        driver.findElement(By.xpath("//li[5]/a[2]/em")).click(); // Клик на Договора
+        driver.findElement(By.xpath("//li[6]/a[2]/em")).click(); //Клик на Банковские реквизиты контрагента
+        //driver.findElement(By.xpath("//li[7]/a[2]/em")).click(); // Клик на представители контрагента не помещается в экране
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    */}
+    }
 }
