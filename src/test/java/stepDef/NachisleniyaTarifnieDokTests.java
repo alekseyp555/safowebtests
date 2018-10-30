@@ -30,7 +30,7 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
     }
 
     @When("Выбрали дату с {localdate}")
-    public void выбрали_дату_с(LocalDate, localdate) {
+    public void выбрали_дату_с(LocalDate localdate) {
         System.out.println(localdate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
     }
 
