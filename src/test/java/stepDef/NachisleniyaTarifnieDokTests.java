@@ -29,16 +29,18 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
         Thread.sleep(5000);
     }
 
-    @When("Выбрали дату с {localdate}")
-    public void выбрали_дату_с(LocalDate localdate) {
+    @When("Выбрали дату {localdate}")
+    public void выбрали_дату_с(LocalDate localdate) throws Throwable{
         //driver.findElement(By.name("ch_dt1")).sendKeys("localdate"); //css locators
         driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).click();
         driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).clear();
         driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).sendKeys(localdate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"))); //дата 01.09.2018 смотреть фичу
+        //driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).sendKeys("localdate");
         //driver.findElement(By.xpath("//div[3]/input")).click(); //xpath locators
         //driver.findElement(By.xpath("//div[3]/input")).clear();
         //driver.findElement(By.xpath("//div[3]/input")).sendKeys(localdate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"))); //дата 01.09.2018
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        Thread.sleep(5000);
         System.out.println(localdate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")));
     }
 
@@ -48,11 +50,13 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
         driver.findElement(By.id("ext-comp-1274")).click(); //№2 Клик по кнопке Применить
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
+        waitForPageLoadComplete(driver);
+        System.out.println("Нажали кнопку Применить");
     }
 
     @Then("Список документов загрузился")
-    public void список_документов_загрузился() {
-        waitForPageLoadComplete(driver);
+    public void список_документов_загрузился() throws Throwable{
+        Thread.sleep(5000);
     }
 
     @Then("Выбрать счет")
@@ -61,6 +65,7 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
         //driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-of-type(5)")).click(); //выбираем второй элемент в списке документов счетов
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
+        waitForPageLoadComplete(driver);
     }
 
     @Then("Загрузились комиссии за обработку документов")
@@ -70,11 +75,11 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
 
     @Then("Клик Излишне начисленные комиссии")
     public void клик_Излишне_начисленные_комиссии() throws Throwable {
-        driver.findElement(By.cssSelector("li:nth-of-type(2) > a:nth-of-type(2) > em > span > span")).click(); //css клик на связки BPM/CRM
-        //driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click(); // xpath клик на связки BPM/CRM
+        driver.findElement(By.cssSelector("li:nth-of-type(2) > a:nth-of-type(2) > em > span > span")).click(); //css клик на Излишне начисленные комиссии
+        //driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click(); // xpath клик на Излишне начисленные комиссии
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        waitForPageLoadComplete(driver); //Ждем загрузку связок сафо
         Thread.sleep(5000);
+        waitForPageLoadComplete(driver); //Ждем загрузку комиссии
     }
 
     @Then("Выбрать компанию")

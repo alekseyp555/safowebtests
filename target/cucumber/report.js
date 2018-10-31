@@ -31,7 +31,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Выбрали дату с 01.09.2018",
+  "name": "Выбрали дату 01.09.2018",
   "keyword": "When "
 });
 formatter.match({
