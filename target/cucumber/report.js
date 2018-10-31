@@ -44,9 +44,11 @@ formatter.step({
   "name": "Клик Применить начисления",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "NachisleniyaTarifnieDokTests.клик_Применить_начисления()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
   "name": "Список документов загрузился",
@@ -56,7 +58,7 @@ formatter.match({
   "location": "NachisleniyaTarifnieDokTests.список_документов_загрузился()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Выбрать счет",
@@ -66,7 +68,7 @@ formatter.match({
   "location": "NachisleniyaTarifnieDokTests.выбрать_счет()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Загрузились комиссии за обработку документов",
@@ -76,7 +78,7 @@ formatter.match({
   "location": "NachisleniyaTarifnieDokTests.загрузились_комиссии_за_обработку_документов()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Клик Излишне начисленные комиссии",
@@ -86,7 +88,7 @@ formatter.match({
   "location": "NachisleniyaTarifnieDokTests.клик_Излишне_начисленные_комиссии()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Выбрать компанию",
@@ -96,7 +98,7 @@ formatter.match({
   "location": "NachisleniyaTarifnieDokTests.выбрать_компанию()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Детализация загрузилась",
@@ -106,7 +108,7 @@ formatter.match({
   "location": "NachisleniyaTarifnieDokTests.детализация_загрузилась()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "Клик на Начисления",
@@ -116,7 +118,7 @@ formatter.match({
   "location": "NachisleniyaTarifnieDokTests.клик_на_Начисления()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"
