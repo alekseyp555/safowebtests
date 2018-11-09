@@ -1,12 +1,12 @@
 package stepDef;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Listeners;
 import utility.Hook;
 
+@Listeners(MyTestListener.class)
 public class TestBase {
 
     protected WebDriver driver;
@@ -27,6 +27,7 @@ public class TestBase {
         driver.findElement(By.id("user")).click();
         driver.findElement(By.id("user")).clear();
         driver.findElement(By.id("user")).sendKeys("ABPak@sbfc.ru");
+        Thread.sleep(5000);
         driver.findElement(By.id("pass")).click();
         driver.findElement(By.id("pass")).clear();
         driver.findElement(By.id("pass")).sendKeys("Makaka123");
@@ -42,6 +43,10 @@ public class TestBase {
     public void selectPusk() {
         //driver.findElement(By.xpath("//button[@id='ext-gen14']")).click();
         driver.findElement(By.cssSelector("#ext-comp-1003")).click(); //valid id
+    }
+
+    public byte[] takeScreenshot() {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
     /*private static void addJQuery (JavascriptExecutor js) {

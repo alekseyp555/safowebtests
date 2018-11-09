@@ -8,11 +8,11 @@ import org.openqa.selenium.WebDriver;
 import utility.Hook;
 import java.util.concurrent.TimeUnit;
 
-public class SmokeModulBusinessProdTests extends TestBase {
+public class ModulBusinessProdTests extends TestBase {
 
     private WebDriver driver;
 
-    public SmokeModulBusinessProdTests () throws Throwable {
+    public ModulBusinessProdTests() throws Throwable {
         this.driver = Hook.getDriver();
         login();
         waitForPageLoadComplete(driver);

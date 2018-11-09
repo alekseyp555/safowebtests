@@ -7,10 +7,15 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Description;
 import utility.Hook;
+
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-
+@Description("Login scenario for SAFO Web")
+@Test
 public class LoginValidTests extends TestBase {
 
     private WebDriver driver;
@@ -51,10 +56,12 @@ public class LoginValidTests extends TestBase {
     }
 
     @Then("^title SAFO modules page should be displayed$")
-    public void title_SAFO_modules_page_should_be_displayed()  {
+    public void title_SAFO_modules_page_should_be_displayed() throws IOException {
         System.out.println("Your page title is : " +driver.getTitle());
         Assert.assertEquals("SmartFactor v5.5.0.20170818 (Релизная среда тестирования)", driver.getTitle());
         //Assert.assertTrue(driver.findElement(By.id("ext-comp-")).isDisplayed());
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
     }
+
 }

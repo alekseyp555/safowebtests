@@ -6,9 +6,9 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import java.util.concurrent.TimeUnit;
 
-public class SmokeHierarchyLimitTests extends TestBase {
+public class HierarchyLimitTests extends TestBase {
 
-    public SmokeHierarchyLimitTests () throws Throwable {
+    public HierarchyLimitTests() throws Throwable {
         super();
         login();
         waitForPageLoadComplete(driver);

@@ -8,14 +8,23 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestContext;
+import org.testng.annotations.BeforeSuite;
+
 import java.util.concurrent.TimeUnit;
+
 
 public class Hook {
 
 	private static WebDriver driver;
 
+	@BeforeSuite
+    public void setUp (ITestContext context) throws Exception {
+	    context.setAttribute("app", app);
+    }
+
     @Before
-	public void setUp(Scenario scenario)
+	public void setUp(Scenario scenario )
 	{
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers//chromedriver.exe");
 		driver= new ChromeDriver();
@@ -45,10 +54,10 @@ public class Hook {
         System.out.println("--------------------------------------------------");
         System.out.println(scenario.getName() + " Status - " + scenario.getStatus());
         System.out.println("--------------------------------------------------");
+
 	}
 
 	public static WebDriver getDriver () {
 	    return driver;
     }
-
 }

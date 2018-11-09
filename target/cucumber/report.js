@@ -1,11 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/features/ContrAgents.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/features/LoginValid.feature");
 formatter.feature({
-  "name": "Тест для тестирования модуля \"Контрагенты\"",
-  "description": "Залогиненный пользователь должен видеть список контрагентов\nПри клике на контрагента должны отображаться Общие сведения, Дополнительно, Лимиты, Договора, Банковские реквизиты",
+  "name": "Login feature File",
+  "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Проверка модуля контрагенты",
+  "name": "Login scenario for SAFO Web",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -21,186 +21,31 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "Выбрать Контрагенты",
+  "name": "navigate to SAFO web page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ContrAgentsTests.выбрать_Контрагенты()"
+  "location": "LoginValidTests.navigate_to_SAFO_web_page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Клик Применить",
+  "name": "user logged using username as \"ABPak@sbfc.ru\" as password \"Makaka123\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "ContrAgentsTests.клик_Применить()"
+  "location": "LoginValidTests.user_logged_using_username_as_as_password(String,String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Список контрагентов появился",
+  "name": "title SAFO modules page should be displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ContrAgentsTests.список_контрагентов_появился()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Выбрать контрагента",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ContrAgentsTests.выбрать_контрагента()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Загрузились свойства контрагента",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ContrAgentsTests.загрузились_свойства_контрагента()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Клик Общие сведения, Дополнительно, Лимиты, Договора, Банковские реквизиты контрагента",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ContrAgentsTests.клик_Общие_сведения_Дополнительно_Лимиты_Договора_Банковские_реквизиты_контрагента()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.uri("src/test/java/features/NachisleniyaTarifnieDok.feature");
-formatter.feature({
-  "name": "Тест для тестирования модуля \"Начисления и тарифные документы\"",
-  "description": "Залогиненный пользователь должен видеть список тарифныз документов, излишне начисленные комиссии, начисления\nПри выборе диапазона дат с 01.07.по 30.10.2018 должны отображатсья тарифные документы за этот период\nПри клике на излишне начисленные комиссии и выборе компании должна отображаться детализация",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "name": "Проверка модуля Начисления и тарифные документы",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@accept"
-    },
-    {
-      "name": "@deb"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Выбрать Начисления и тарифные документы",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "NachisleniyaTarifnieDokTests.выбрать_Начисления_и_тарифные_документы()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Выбрали дату 01.09.2018",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "NachisleniyaTarifnieDokTests.выбрали_дату_с(LocalDate)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Клик Применить начисления",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "NachisleniyaTarifnieDokTests.клик_Применить_начисления()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Список документов загрузился",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "NachisleniyaTarifnieDokTests.список_документов_загрузился()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Выбрать счет",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "NachisleniyaTarifnieDokTests.выбрать_счет()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Загрузились комиссии за обработку документов",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "NachisleniyaTarifnieDokTests.загрузились_комиссии_за_обработку_документов()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Клик Излишне начисленные комиссии",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "NachisleniyaTarifnieDokTests.клик_Излишне_начисленные_комиссии()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Выбрать компанию",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "NachisleniyaTarifnieDokTests.выбрать_компанию()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Детализация загрузилась",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "NachisleniyaTarifnieDokTests.детализация_загрузилась()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Клик на Начисления",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "NachisleniyaTarifnieDokTests.клик_на_Начисления()"
+  "location": "LoginValidTests.title_SAFO_modules_page_should_be_displayed()"
 });
 formatter.result({
   "status": "passed"

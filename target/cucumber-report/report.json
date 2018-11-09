@@ -1,0 +1,530 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4305581247,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setUp(Scenario)"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Проверка модуля клиентский менеджер",
+        "description": "",
+        "id": "тест-для-тестирования-модуля-\"клиентский-менеджер\";проверка-модуля-клиентский-менеджер",
+        "after": [
+          {
+            "result": {
+              "duration": 812935175,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 18458071001,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Выбрать клиентский менеджер",
+            "match": {
+              "location": "ClientManagerPageTests.выбрать_клиентский_менеджер()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5232267957,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "выбрать менеджера",
+            "match": {
+              "location": "ClientManagerPageTests.выбрать_менеджера()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16155596,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "загрузились связки из сафо",
+            "match": {
+              "location": "ClientManagerPageTests.загрузились_связки_из_сафо()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5319541163,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "клик на связки в BPM/CRM",
+            "match": {
+              "location": "ClientManagerPageTests.клик_на_связки_в_BPM_CRM()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 23319865,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "загрузились связки из BPM/CRM",
+            "match": {
+              "location": "ClientManagerPageTests.загрузились_связки_из_BPM_CRM()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5374864218,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "клик на контрагенты",
+            "match": {
+              "location": "ClientManagerPageTests.клик_на_контрагенты()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18423487,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "загрузились контрагенты",
+            "match": {
+              "location": "ClientManagerPageTests.загрузились_контрагенты()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accept"
+          },
+          {
+            "name": "@deb"
+          }
+        ]
+      }
+    ],
+    "name": "Тест для тестирования модуля \"Клиентский менеджер\"",
+    "description": "Залогиненный пользователь должен видеть список клиентских менеджеров\nПри клике на менеджера должны отображаться связи из САФО\nПри клике на связки BPM/CRM должны отображаться связки в BPM/CRM\nПри клике на контрагента должны отображаться контрагенты",
+    "id": "тест-для-тестирования-модуля-\"клиентский-менеджер\"",
+    "keyword": "Feature",
+    "uri": "src/test/java/features/ClientManagerPage.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2705256754,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setUp(Scenario)"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Проверка модуля контрагенты",
+        "description": "",
+        "id": "тест-для-тестирования-модуля-\"контрагенты\";проверка-модуля-контрагенты",
+        "after": [
+          {
+            "result": {
+              "duration": 682480238,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "cucumber.runtime.CucumberException: Failed to instantiate class stepDef.ContrAgentsTests\r\n\tat cucumber.runtime.java.DefaultJavaObjectFactory.cacheNewInstance(DefaultJavaObjectFactory.java:47)\r\n\tat cucumber.runtime.java.DefaultJavaObjectFactory.getInstance(DefaultJavaObjectFactory.java:33)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:48)\r\n\tat cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:55)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:42)\r\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:47)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:44)\r\n\tat cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)\r\n\tat cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)\r\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:583)\r\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)\r\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:648)\r\n\tat org.testng.TestRunner.run(TestRunner.java:505)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:455)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\r\n\tat org.testng.TestNG.run(TestNG.java:1017)\r\n\tat org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)\r\n\tat org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)\r\nCaused by: java.lang.reflect.InvocationTargetException\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat cucumber.runtime.java.DefaultJavaObjectFactory.cacheNewInstance(DefaultJavaObjectFactory.java:41)\r\n\t... 34 more\r\nCaused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#ext-comp-1059\"}\n  (Session info: chrome\u003d69.0.3497.100)\n  (Driver info: chromedriver\u003d2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform\u003dWindows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027RAND-54\u0027, ip: \u0027192.168.61.55\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_181\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\\Users\\Pak-AB\\AppData\\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64222}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 69.0.3497.100, webStorageEnabled: true}\nSession ID: 1d83e0b63e2ee3307d335b8f9dfd40a9\n*** Element info: {Using\u003dcss selector, value\u003d#ext-comp-1059}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:416)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat stepDef.TestBase.selectSpravochnik(TestBase.java:40)\r\n\tat stepDef.ContrAgentsTests.\u003cinit\u003e(ContrAgentsTests.java:25)\r\n\t... 39 more\r\n",
+              "duration": 42651928352,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "Выбрать Контрагенты",
+            "match": {
+              "location": "ContrAgentsTests.выбрать_Контрагенты()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Клик Применить",
+            "match": {
+              "location": "ContrAgentsTests.клик_Применить()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "Список контрагентов появился",
+            "match": {
+              "location": "ContrAgentsTests.список_контрагентов_появился()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "Выбрать контрагента",
+            "match": {
+              "location": "ContrAgentsTests.выбрать_контрагента()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "Загрузились свойства контрагента",
+            "match": {
+              "location": "ContrAgentsTests.загрузились_свойства_контрагента()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "Клик Общие сведения, Дополнительно, Лимиты, Договора, Банковские реквизиты контрагента",
+            "match": {
+              "location": "ContrAgentsTests.клик_Общие_сведения_Дополнительно_Лимиты_Договора_Банковские_реквизиты_контрагента()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accept"
+          },
+          {
+            "name": "@deb"
+          }
+        ]
+      }
+    ],
+    "name": "Тест для тестирования модуля \"Контрагенты\"",
+    "description": "Залогиненный пользователь должен видеть список контрагентов\nПри клике на контрагента должны отображаться Общие сведения, Дополнительно, Лимиты, Договора, Банковские реквизиты",
+    "id": "тест-для-тестирования-модуля-\"контрагенты\"",
+    "keyword": "Feature",
+    "uri": "src/test/java/features/ContrAgents.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2671673438,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setUp(Scenario)"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Login scenario for SAFO Web",
+        "description": "",
+        "id": "login-feature-file;login-scenario-for-safo-web",
+        "after": [
+          {
+            "result": {
+              "duration": 803435711,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1330892647,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to SAFO web page",
+            "match": {
+              "location": "LoginValidTests.navigate_to_SAFO_web_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6269738956,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user logged using username as \"ABPak@sbfc.ru\" as password \"Makaka123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ABPak@sbfc.ru",
+                  "offset": 31
+                },
+                {
+                  "val": "Makaka123",
+                  "offset": 59
+                }
+              ],
+              "location": "LoginValidTests.user_logged_using_username_as_as_password(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 34446700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "title SAFO modules page should be displayed",
+            "match": {
+              "location": "LoginValidTests.title_SAFO_modules_page_should_be_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accept"
+          },
+          {
+            "name": "@deb"
+          }
+        ]
+      }
+    ],
+    "name": "Login feature File",
+    "description": "",
+    "id": "login-feature-file",
+    "keyword": "Feature",
+    "uri": "src/test/java/features/LoginValid.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2528798147,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setUp(Scenario)"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Проверка модуля Начисления и тарифные документы",
+        "description": "",
+        "id": "тест-для-тестирования-модуля-\"начисления-и-тарифные-документы\";проверка-модуля-начисления-и-тарифные-документы",
+        "after": [
+          {
+            "result": {
+              "duration": 820295120,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 18384202773,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Выбрать Начисления и тарифные документы",
+            "match": {
+              "location": "NachisleniyaTarifnieDokTests.выбрать_Начисления_и_тарифные_документы()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8179734298,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Выбрали дату 01.09.2018",
+            "match": {
+              "arguments": [
+                {
+                  "val": "01.09.2018",
+                  "offset": 13
+                }
+              ],
+              "location": "NachisleniyaTarifnieDokTests.выбрали_дату_с(LocalDate)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5230792580,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Клик Применить начисления",
+            "match": {
+              "location": "NachisleniyaTarifnieDokTests.клик_Применить_начисления()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000193002,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Список документов загрузился",
+            "match": {
+              "location": "NachisleniyaTarifnieDokTests.список_документов_загрузился()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5250679855,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Выбрать счет",
+            "match": {
+              "location": "NachisleniyaTarifnieDokTests.выбрать_счет()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 14546946,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Загрузились комиссии за обработку документов",
+            "match": {
+              "location": "NachisleniyaTarifnieDokTests.загрузились_комиссии_за_обработку_документов()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5335415947,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Клик Излишне начисленные комиссии",
+            "match": {
+              "location": "NachisleniyaTarifnieDokTests.клик_Излишне_начисленные_комиссии()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5290806977,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Выбрать компанию",
+            "match": {
+              "location": "NachisleniyaTarifnieDokTests.выбрать_компанию()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 18149360,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Детализация загрузилась",
+            "match": {
+              "location": "NachisleniyaTarifnieDokTests.детализация_загрузилась()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5352912754,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Клик на Начисления",
+            "match": {
+              "location": "NachisleniyaTarifnieDokTests.клик_на_Начисления()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accept"
+          },
+          {
+            "name": "@deb"
+          }
+        ]
+      }
+    ],
+    "name": "Тест для тестирования модуля \"Начисления и тарифные документы\"",
+    "description": "Залогиненный пользователь должен видеть список тарифныз документов, излишне начисленные комиссии, начисления\nПри выборе диапазона дат с 01.07.по 30.10.2018 должны отображатсья тарифные документы за этот период\nПри клике на излишне начисленные комиссии и выборе компании должна отображаться детализация",
+    "id": "тест-для-тестирования-модуля-\"начисления-и-тарифные-документы\"",
+    "keyword": "Feature",
+    "uri": "src/test/java/features/NachisleniyaTarifnieDok.feature",
+    "tags": []
+  }
+]

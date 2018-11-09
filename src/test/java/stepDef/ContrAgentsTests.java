@@ -3,10 +3,15 @@ package stepDef;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.qameta.allure.junit4.DisplayName;
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Description;
 
 import java.util.concurrent.TimeUnit;
 
+@Description("Проверка модуля контрагенты")
+@Test
 public class ContrAgentsTests extends TestBase{
 
     public ContrAgentsTests () throws  Throwable{
