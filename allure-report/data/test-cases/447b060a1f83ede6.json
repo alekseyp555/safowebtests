@@ -1,0 +1,93 @@
+{
+  "uid" : "447b060a1f83ede6",
+  "name" : "Runs Cucumber Scenarios",
+  "fullName" : "cucumber.api.testng.AbstractTestNGCucumberTests.runScenario",
+  "historyId" : "8775467843cd312bfe7372ca418a5fb2",
+  "time" : {
+    "start" : 1542025419978,
+    "stop" : 1542025477676,
+    "duration" : 57698
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "setUpClass",
+    "time" : {
+      "start" : 1542025418325,
+      "stop" : 1542025419184,
+      "duration" : 859
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1542025477716,
+      "stop" : 1542025477756,
+      "duration" : 40
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "runner.RunTest"
+  }, {
+    "name" : "testClass",
+    "value" : "runner.RunTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "runScenario"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite",
+    "value" : "ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "runner.RunTest"
+  }, {
+    "name" : "host",
+    "value" : "RAND-54"
+  }, {
+    "name" : "thread",
+    "value" : "22128@RAND-54.main(1)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "\"Проверка модуля Проверочные массивы финансового мониторинга\""
+  }, {
+    "name" : "arg1",
+    "value" : "\"Тест для тестирования модуля \"Проверочные массивы финансового мониторинга\"\""
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "447b060a1f83ede6.json",
+  "parameterValues" : [ "\"Проверка модуля Проверочные массивы финансового мониторинга\"", "\"Тест для тестирования модуля \"Проверочные массивы финансового мониторинга\"\"" ]
+}

@@ -23,5 +23,3 @@ import cucumber.api.CucumberOptions;
 public class RunTest extends AbstractTestNGCucumberTests {
 
 }
-
-

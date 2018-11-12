@@ -5,17 +5,22 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import utility.Hook;
+import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Description;
+
 import java.util.concurrent.TimeUnit;
 
+
+@Description("Проверка модуля Бизнес продукты")
+@Test
 public class ModulBusinessProdTests extends TestBase {
 
     private WebDriver driver;
 
     public ModulBusinessProdTests() throws Throwable {
-        this.driver = Hook.getDriver();
-        login();
-        waitForPageLoadComplete(driver);
+        super();
+        app.login("ABPak@sbfc.ru", "Makaka123");
+        app.waitForPageLoadComplete(driver);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }
@@ -23,14 +28,14 @@ public class ModulBusinessProdTests extends TestBase {
     @Given("клик на кнопку Пуск")
     public void клик_на_кнопку_Пуск() throws Throwable {
         //driver.findElement(By.xpath("//[@id='ext-gen14']")).click();
-        selectPusk();
+        app.selectPusk();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         //Thread.sleep(5000);
     }
 
     @Given("выбрать справочники")
     public void выбрать_справочники() {
-        selectSpravochnik();
+        app.selectSpravochnik();
     }
 
     @When("выбрать Бизнес-продукты")
@@ -42,7 +47,7 @@ public class ModulBusinessProdTests extends TestBase {
 
     @Then("страницы с бизнес продуктами загрузилась")
     public void страницы_с_бизнес_продуктами_загрузилась() {
-        waitForPageLoadComplete(driver); //Ждем загрузку бизнес продуктов и элементов js
+        app.waitForPageLoadComplete(driver); //Ждем загрузку бизнес продуктов и элементов js
     }
 
     @Then("выбрать Агентский факторинг без права регресса")

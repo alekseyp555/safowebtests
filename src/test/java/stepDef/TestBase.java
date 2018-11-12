@@ -1,52 +1,25 @@
 package stepDef;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import appmanager.ApplicationManager;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Listeners;
-import utility.Hook;
 
 @Listeners(MyTestListener.class)
 public class TestBase {
 
-    protected WebDriver driver;
+    protected final ApplicationManager app;
 
     public TestBase() {
-        this.driver = Hook.getDriver();
-    }
-
-    public void waitForPageLoadComplete(WebDriver driver) {
-        new WebDriverWait(driver,30).until((ExpectedCondition<Boolean>) wd ->
-                ((JavascriptExecutor) driver).executeScript("return document.readyState")
-                .equals("complete"));
-    }
-
-    public void login() throws Throwable{
-        this.driver = Hook.getDriver();
-        driver.get("http://bugs-kz/login.html");
-        driver.findElement(By.id("user")).click();
-        driver.findElement(By.id("user")).clear();
-        driver.findElement(By.id("user")).sendKeys("ABPak@sbfc.ru");
-        Thread.sleep(5000);
-        driver.findElement(By.id("pass")).click();
-        driver.findElement(By.id("pass")).clear();
-        driver.findElement(By.id("pass")).sendKeys("Makaka123");
-        driver.findElement(By.xpath("//button")).click();
-    }
-
-    public void selectSpravochnik() {
-        driver.findElement(By.cssSelector("#ext-comp-1059")).click(); //valid id
-        //driver.findElement(By.id("ext-gen110")).click(); //not good xpath locator
-        //driver.findElement(By.cssSelector("[class*=x-menu-list-item]:nth-of-type(6)")); //выбрать справочники
-    }
-
-    public void selectPusk() {
-        //driver.findElement(By.xpath("//button[@id='ext-gen14']")).click();
-        driver.findElement(By.cssSelector("#ext-comp-1003")).click(); //valid id
+        app = new ApplicationManager();
     }
 
     public byte[] takeScreenshot() {
-        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+        return ((TakesScreenshot) ApplicationManager.driver).getScreenshotAs(OutputType.BYTES);
+    }
+
+    public ApplicationManager getApp() {
+        return app;
     }
 
     /*private static void addJQuery (JavascriptExecutor js) {

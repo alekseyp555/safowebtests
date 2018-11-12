@@ -3,38 +3,32 @@
  */
 package utility;
 
+import appmanager.ApplicationManager;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
+import stepDef.MyTestListener;
 
-import java.util.concurrent.TimeUnit;
-
-
+@Listeners(MyTestListener.class)
 public class Hook {
 
-	private static WebDriver driver;
+    private final ApplicationManager app = new ApplicationManager();
 
-	@BeforeSuite
-    public void setUp (ITestContext context) throws Exception {
-	    context.setAttribute("app", app);
+    @BeforeSuite
+    public void setUp (ITestContext context)    {
+        context.setAttribute("app", app);
     }
 
     @Before
-	public void setUp(Scenario scenario )
+	public void setUp(Scenario scenario)
 	{
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers//chromedriver.exe");
-		driver= new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        System.out.println("----------------------------------------------------");
-		System.out.println("Starting - " + scenario.getName());
-        System.out.println("----------------------------------------------------");
-	}
+        app.init(scenario);
+    }
 
-	/*
+    /*
 	@Before("@appium")
 	public void setUpAppium() throws MalformedURLException
 	{
@@ -46,18 +40,13 @@ public class Hook {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	*/
-	
 	@After
 	public void tearDown(Scenario scenario)
 	{
-	    driver.quit();
-        System.out.println("--------------------------------------------------");
-        System.out.println(scenario.getName() + " Status - " + scenario.getStatus());
-        System.out.println("--------------------------------------------------");
+        app.stop(scenario);
 
-	}
-
-	public static WebDriver getDriver () {
-	    return driver;
+    }
+    public ApplicationManager getApp() {
+        return app;
     }
 }

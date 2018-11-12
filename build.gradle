@@ -53,6 +53,12 @@ test.doFirst {
     jvmArgs "-javaagent:${configurations.agent.singleFile}"
 }
 
+test {
+    useTestNG() {
+        suites 'src/test/resources/testng.xml'
+    }
+}
+
 allure {
     version = '2.2.1'
     autoconfigure = true

@@ -9,18 +9,18 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
-import utility.Hook;
-
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import static org.testng.Assert.assertEquals;
 
 @Description("Login scenario for SAFO Web")
 @Test
 public class LoginValidTests extends TestBase {
 
     private WebDriver driver;
+
     public LoginValidTests() {
-        this.driver = Hook.getDriver();
+        this.driver = app.getDriver();
     }
 
     @Given("navigate to SAFO web page")
@@ -28,7 +28,7 @@ public class LoginValidTests extends TestBase {
         driver.get("http://bugs-kz/login.html");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //Thread.sleep(5000);
-        waitForPageLoadComplete(driver);
+        app.waitForPageLoadComplete(driver);
     }
 
     @And("^I validate login field$")
@@ -45,23 +45,24 @@ public class LoginValidTests extends TestBase {
     public void user_logged_using_username_as_as_password(String username, String password) throws Throwable {
         driver.findElement(By.id("user")).click();
         driver.findElement(By.id("user")).clear();
-        driver.findElement(By.id("user")).sendKeys("ABPak@sbfc.ru");
+        driver.findElement(By.id("user")).sendKeys(username);
+        Thread.sleep(5000);
         driver.findElement(By.id("pass")).click();
         driver.findElement(By.id("pass")).clear();
-        driver.findElement(By.id("pass")).sendKeys("Makaka123");
+        driver.findElement(By.id("pass")).sendKeys(password);
         driver.findElement(By.xpath("//button")).click();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
-        waitForPageLoadComplete(driver);
+        app.waitForPageLoadComplete(driver);
     }
 
     @Then("^title SAFO modules page should be displayed$")
-    public void title_SAFO_modules_page_should_be_displayed() throws IOException {
-        System.out.println("Your page title is : " +driver.getTitle());
-        Assert.assertEquals("SmartFactor v5.5.0.20170818 (Релизная среда тестирования)", driver.getTitle());
-        //Assert.assertTrue(driver.findElement(By.id("ext-comp-")).isDisplayed());
+    public void title_SAFO_modules_page_should_be_displayed() throws InterruptedException {
+        app.selectPusk();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+        Thread.sleep(5000);
+        System.out.println("Your page title is : " + driver.getTitle());
+        assertEquals(driver.getTitle(), "SmartFactor v5.5.0.20170818 (Релизная среда тестирования)");
+        //Assert.assertTrue(driver.findElement(By.id("ext-comp-")).isDisplayed());
     }
-
 }

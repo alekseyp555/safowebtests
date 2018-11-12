@@ -1,0 +1,69 @@
+{
+  "uid" : "5eb6e6281c42352b",
+  "name" : "runScenario[\"Проверка модуля Проверочные массивы финансового мониторинга\",\"Тест для тестирования модуля \"Проверочные массивы финансового мониторинга\"\"]",
+  "fullName" : "runner.RunTest.runScenario",
+  "historyId" : "c3d324a5e52d39affc1c5f90b0ce5b6d",
+  "time" : {
+    "start" : 1542025419778,
+    "stop" : 1542025477665,
+    "duration" : 57887
+  },
+  "description" : "Runs Cucumber Scenarios",
+  "descriptionHtml" : "<p>Runs Cucumber Scenarios</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "host",
+    "value" : "RAND-54"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "testClass",
+    "value" : "runner.RunTest"
+  }, {
+    "name" : "testGroup",
+    "value" : "ui"
+  }, {
+    "name" : "testMethod",
+    "value" : "runScenario"
+  }, {
+    "name" : "testSuite",
+    "value" : "Default Suite"
+  }, {
+    "name" : "thread",
+    "value" : "22128@RAND-54.main(1)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite",
+    "value" : "ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "runner.RunTest"
+  }, {
+    "name" : "package",
+    "value" : "runner.RunTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5eb6e6281c42352b.json",
+  "parameterValues" : [ ]
+}

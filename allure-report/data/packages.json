@@ -1,0 +1,49 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "runner.RunTest",
+    "children" : [ {
+      "name" : "runScenario",
+      "uid" : "5eb6e6281c42352b",
+      "parentUid" : "fa2e30877d1258eb7bb330e6dcc5b1b2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1542025419778,
+        "stop" : 1542025477665,
+        "duration" : 57887
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "runScenario",
+      "uid" : "447b060a1f83ede6",
+      "parentUid" : "fa2e30877d1258eb7bb330e6dcc5b1b2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1542025419978,
+        "stop" : 1542025477676,
+        "duration" : 57698
+      },
+      "flaky" : false,
+      "parameters" : [ "\"Проверка модуля Проверочные массивы финансового мониторинга\"", "\"Тест для тестирования модуля \"Проверочные массивы финансового мониторинга\"\"" ]
+    } ],
+    "uid" : "runner.RunTest"
+  }, {
+    "name" : "Тест для тестирования модуля \"Проверочные массивы финансового мониторинга\"",
+    "children" : [ {
+      "name" : "Проверка модуля Проверочные массивы финансового мониторинга",
+      "uid" : "b259cd67c19150c7",
+      "parentUid" : "f03bf7ac700e37fa9c5b5489e4ca6941",
+      "status" : "passed",
+      "time" : {
+        "start" : 1542025420055,
+        "stop" : 1542025477380,
+        "duration" : 57325
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "f03bf7ac700e37fa9c5b5489e4ca6941"
+  } ]
+}
