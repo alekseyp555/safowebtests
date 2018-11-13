@@ -1,0 +1,89 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4737674922,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setUp(Scenario)"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Проверка модуля Пользовательские справочники",
+        "description": "",
+        "id": "тест-для-тестирования-модуля-\"пользовательские-справочники\";проверка-модуля-пользовательские-справочники",
+        "after": [
+          {
+            "result": {
+              "duration": 774532147,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 19155763663,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Выбрать Пользовательские справочники",
+            "match": {
+              "location": "PolzovatelskieSpravochnikiTests.выбрать_Пользовательские_справочники()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5171440097,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Справочник банков",
+            "match": {
+              "location": "PolzovatelskieSpravochnikiTests.справочник_банков()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 217598434,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Загрузилась информация про банки",
+            "match": {
+              "location": "PolzovatelskieSpravochnikiTests.загрузилась_информация_про_банки()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accept"
+          },
+          {
+            "name": "@deb"
+          }
+        ]
+      }
+    ],
+    "name": "Тест для тестирования модуля \"Пользовательские справочники\"",
+    "description": "Залогиненный пользователь должен видеть список пользовательских справочников\nПри клике на справочник отображается информация",
+    "id": "тест-для-тестирования-модуля-\"пользовательские-справочники\"",
+    "keyword": "Feature",
+    "uri": "src/test/java/features/PolzovatelskieSpravochniki.feature",
+    "tags": []
+  }
+]
