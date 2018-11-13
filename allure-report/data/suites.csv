@@ -1,5 +1,0 @@
-"Status","Name","Duration in ms","Description"
-"passed","","57325","Залогиненный пользователь должен видеть список ФИО
-При клике на Террористы/Организация, Территория террористической активности, ФАТФ, Оффшоррные зоны, Виды деятельности, Банковские счета отображаются данные"
-"passed","cucumber.api.testng.AbstractTestNGCucumberTests.runScenario","57698",""
-"passed","runner.RunTest.runScenario","57887","Runs Cucumber Scenarios"

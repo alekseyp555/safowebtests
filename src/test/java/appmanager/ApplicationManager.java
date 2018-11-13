@@ -9,6 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import sun.swing.BakedArrayList;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -90,12 +93,4 @@ public class ApplicationManager {
         } else System.err.println(scenario.getName() + " Status - " + scenario.getStatus());
         System.out.println("--------------------------------------------------");
     }
-
-    //public int getCount(int index) {
-        //WebElement baseTable = driver.findElement(By.cssSelector("#ext-comp-1659"));
-        //WebElement baseTable = driver.findElement(By.xpath("//*[@id='ext-comp-1659']/div/div/div[2]/div/div/div/div/div[2]/div/div"));
-        //List<WebElement> tableRows = baseTable.findElements(By.tagName("tr"));
-        //tableRows.get(index).getSize();
-        //return getCount(index);
-    //}
 }

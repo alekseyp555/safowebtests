@@ -58,6 +58,13 @@ test {
         suites 'src/test/resources/testng.xml'
     }
 }
+tasks.withType(Test) {
+    testLogging {
+        exceptionFormat "full"
+        events "started", "skipped", "passed", "failed"
+        showStandardStreams true
+    }
+}
 
 allure {
     version = '2.2.1'

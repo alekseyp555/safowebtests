@@ -5,7 +5,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 
@@ -50,6 +49,10 @@ public class PMFMTests extends TestBase {
 
     @Then("Клик Турция")
     public void клик_Турция() throws InterruptedException {
+        //WebElement baseTable = driver.findElement(By.cssSelector("#ext-comp-1659"));
+        //WebElement baseTable = app.driver.findElement(By.xpath("//*[@id='ext-comp-1659']/div/div/div[2]/div/div/div/div/div[2]/div/div"));
+        //List<WebElement> tableRows = baseTable.findElements(By.cssSelector("table.x-grid3-row-table"));
+        //System.out.println("Text is " + tableRows.get(2).getText());
         //app.driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")).click(); //выбираем второй элемент в списке
         app.driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Россия / Российская Федерация'])[1]/preceding::div[21]")).click();        //app.driver.findElement(By.xpath("//div[2]/div/div[2]/div/div/div[2]/div/div[2]/table/tbody/tr/td[2]/div")).click();
         app.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
@@ -64,6 +67,7 @@ public class PMFMTests extends TestBase {
 
     @Then("Клик Корея, КНДР")
     public void клик_Корея_КНДР() throws InterruptedException {
+        app.driver.findElement(By.xpath("//div[3]/div/div[2]/div/div/div[2]/div/div[2]/table/tbody/tr/td[2]/div")).click(); //клик 2 элемент
          //app.driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")).click(); //выбираем второй элемент в списке
         app.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
@@ -77,6 +81,7 @@ public class PMFMTests extends TestBase {
 
     @Then("Клик Белиз")
     public void клик_Белиз() throws InterruptedException {
+        app.driver.findElement(By.xpath("//div[4]/div/div[2]/div/div/div[2]/div/div[9]/table/tbody/tr/td[2]/div")).click(); // 10 элемент
         app.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
     }
@@ -89,6 +94,7 @@ public class PMFMTests extends TestBase {
 
     @Then("Клик Деятельность, связанная со скупкой")
     public void клик_Деятельность_связанная_со_скупкой() throws InterruptedException {
+        app.driver.findElement(By.xpath("//div[5]/div/div[2]/div/div/div[2]/div/div[2]/table/tbody/tr/td[2]/div")).click(); //клик 2 элемент
         app.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
     }
@@ -101,6 +107,7 @@ public class PMFMTests extends TestBase {
 
     @Then("Клик счет")
     public void клик_счет() throws InterruptedException {
+        app.driver.findElement(By.xpath("//div[6]/div/div[2]/div/div/div[2]/div/div[2]/table/tbody/tr/td[2]/div")).click();
         app.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
     }
