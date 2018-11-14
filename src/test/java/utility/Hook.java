@@ -16,7 +16,9 @@ import stepDef.MyTestListener;
 public class Hook {
 
     private final ApplicationManager app = new ApplicationManager();
+    //protected static final ApplicationManager app = new ApplicationManager();
 
+    //@BeforeSuite
     @BeforeSuite
     public void setUp (ITestContext context)    {
         context.setAttribute("app", app);
@@ -40,12 +42,14 @@ public class Hook {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	*/
+
     @After
 	public void tearDown(Scenario scenario)
 	{
         app.stop(scenario);
 
     }
+
     public ApplicationManager getApp() {
         return app;
     }
