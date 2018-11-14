@@ -1,8 +1,0 @@
-"Status","Name","Duration in ms","Description"
-"passed","runner.RunTest.runScenario","31321","Runs Cucumber Scenarios"
-"passed","cucumber.api.testng.AbstractTestNGCucumberTests.runScenario","31187",""
-"passed","","30898","При клике на календарь отображается информация о календаре"
-"passed","","29222","Залогиненный пользователь должен видеть список пользовательских справочников
-При клике на справочник отображается информация"
-"passed","runner.RunTest.runScenario","29542","Runs Cucumber Scenarios"
-"passed","cucumber.api.testng.AbstractTestNGCucumberTests.runScenario","29581",""

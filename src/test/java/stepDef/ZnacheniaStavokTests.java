@@ -27,7 +27,7 @@ public class ZnacheniaStavokTests extends TestBase {
 
     @Given("Выбрать Значения ставок")
     public void выбрать_Значения_ставок() throws InterruptedException {
-        app.driver.findElement(By.id("ext-comp-1069")).click(); //Клик на контрагенты
+        app.driver.findElement(By.id("ext-comp-1069")).click(); //Клик на ставки
         app.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }

@@ -125,11 +125,11 @@
         <counts>
           <entry key="bat" value="1" />
           <entry key="class" value="1" />
-          <entry key="feature" value="134" />
+          <entry key="feature" value="135" />
           <entry key="gradle" value="19" />
           <entry key="gradlew" value="4" />
           <entry key="html" value="1" />
-          <entry key="java" value="299" />
+          <entry key="java" value="301" />
           <entry key="md" value="1" />
           <entry key="properties" value="7" />
           <entry key="substeps" value="1" />
@@ -141,10 +141,10 @@
           <entry key="CLASS" value="1" />
           <entry key="Groovy" value="19" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="299" />
+          <entry key="JAVA" value="301" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Properties" value="7" />
-          <entry key="Substeps" value="134" />
+          <entry key="Substeps" value="135" />
           <entry key="Substeps step definition" value="1" />
           <entry key="XML" value="7" />
         </counts>
@@ -152,9 +152,9 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="51" />
-          <entry key="feature" value="2675" />
+          <entry key="feature" value="2897" />
           <entry key="gradle" value="315" />
-          <entry key="java" value="8773" />
+          <entry key="java" value="9004" />
           <entry key="properties" value="61" />
           <entry key="xml" value="41" />
         </counts>
@@ -162,11 +162,11 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="315" />
-          <entry key="JAVA" value="8772" />
+          <entry key="JAVA" value="9003" />
           <entry key="PLAIN_TEXT" value="51" />
           <entry key="Properties" value="61" />
           <entry key="RegExp" value="1" />
-          <entry key="Substeps" value="2675" />
+          <entry key="Substeps" value="2897" />
           <entry key="XML" value="41" />
         </counts>
       </usages-collector>
@@ -187,8 +187,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/RabCalendarTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="26" selection-start-line="26" selection-end-line="29" selection-end-column="27" />
+            <state relative-caret-position="166">
+              <caret line="11" selection-start-line="11" selection-end-line="12" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -197,28 +197,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/features/SmokeModulBusinessProd.feature">
+        <entry file="file://$PROJECT_DIR$/src/test/java/features/ZnacheniaStavok.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="170">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/features/ZnacheniaStavok.feature">
+        <entry file="file://$PROJECT_DIR$/src/test/java/features/TarifnieGruppi.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/ZnacheniaStavokTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/ZnacheniaStavokTests.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/TarifGrupTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+            <state relative-caret-position="511">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/runner/RunTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -239,28 +263,10 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/ModulBusinessProdTests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="56" selection-start-line="56" selection-end-line="60" selection-end-column="27" />
+              <caret line="56" column="81" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/features/LoginValid.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/features/NachisleniyaTarifnieDok.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -662,7 +668,9 @@
         <option value="$PROJECT_DIR$/src/test/java/features/PolzovatelskieSpravochniki.feature" />
         <option value="$PROJECT_DIR$/src/test/java/features/RabCalendar.feature" />
         <option value="$PROJECT_DIR$/src/test/java/features/ZnacheniaStavok.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/features/TarifnieGruppi.feature" />
         <option value="$PROJECT_DIR$/src/test/java/stepDef/ZnacheniaStavokTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/stepDef/TarifGrupTests.java" />
       </list>
     </option>
   </component>
@@ -672,7 +680,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1400" />
@@ -803,7 +811,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542173065518" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542174756195" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -1095,15 +1103,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunTest - 2018.11.13 at 16h 34m 27s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2018.11.13 at 16h 36m 04s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2018.11.13 at 16h 38m 06s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="RunTest - 2018.11.13 at 16h 52m 53s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
@@ -1123,6 +1122,15 @@
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="RunTest - 2018.11.14 at 08h 22m 37s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2018.11.14 at 08h 32m 09s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2018.11.14 at 08h 45m 17s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2018.11.14 at 08h 47m 36s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -1231,20 +1239,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runner/PickleStepDefinitionMatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/cucumber/index.html" />
     <entry file="file://$PROJECT_DIR$/gradlew.bat">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1402,16 +1396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/runner/RunTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1555,27 +1539,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/features/ZnacheniaStavok.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/RabCalendarTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="26" selection-start-line="26" selection-end-line="29" selection-end-column="27" />
+        <state relative-caret-position="166">
+          <caret line="11" selection-start-line="11" selection-end-line="12" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/features/ZnacheniaStavok.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/java/features/TarifnieGruppi.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/ModulBusinessProdTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="56" selection-start-line="56" selection-end-line="60" selection-end-column="27" />
+          <caret line="56" column="81" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/runner/RunTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1584,8 +1585,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/ZnacheniaStavokTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        <state relative-caret-position="457">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/TarifGrupTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
