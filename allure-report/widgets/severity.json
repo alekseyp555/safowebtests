@@ -1,0 +1,61 @@
+[ {
+  "uid" : "3aea30dce2179e41",
+  "name" : "runScenario[\"Проверка модуля Пользовательские справочники\",\"Тест для тестирования модуля \"Пользовательские справочники\"\"]",
+  "time" : {
+    "start" : 1542117618790,
+    "stop" : 1542117648332,
+    "duration" : 29542
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "319cce965808f35",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1542117618734,
+    "stop" : 1542117648315,
+    "duration" : 29581
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5e3099cfbe074838",
+  "name" : "Проверка модуля Пользовательские справочники",
+  "time" : {
+    "start" : 1542117618839,
+    "stop" : 1542117648061,
+    "duration" : 29222
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1ffdd8863960f3b1",
+  "name" : "Проверка модуля Рабочий календарь",
+  "time" : {
+    "start" : 1542119454362,
+    "stop" : 1542119485260,
+    "duration" : 30898
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3dab55875dbfb8bd",
+  "name" : "Runs Cucumber Scenarios",
+  "time" : {
+    "start" : 1542119454339,
+    "stop" : 1542119485526,
+    "duration" : 31187
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8bc245e06393f5ef",
+  "name" : "runScenario[\"Проверка модуля Рабочий календарь\",\"Тест для тестирования модуля \"Рабочий календарь\"\"]",
+  "time" : {
+    "start" : 1542119454197,
+    "stop" : 1542119485518,
+    "duration" : 31321
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,153 @@
+{
+  "uid" : "5e3099cfbe074838",
+  "name" : "Проверка модуля Пользовательские справочники",
+  "historyId" : "5b026ae7b1739f1bb12a0ff7bcb7bb18",
+  "time" : {
+    "start" : 1542117618839,
+    "stop" : 1542117648061,
+    "duration" : 29222
+  },
+  "description" : "Залогиненный пользователь должен видеть список пользовательских справочников\nПри клике на справочник отображается информация",
+  "descriptionHtml" : "<p>Залогиненный пользователь должен видеть список пользовательских справочников\nПри клике на справочник отображается информация</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Залогиненный пользователь должен видеть список пользовательских справочников\nПри клике на справочник отображается информация",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "before",
+      "time" : {
+        "start" : 1542117618856,
+        "stop" : 1542117623207,
+        "duration" : 4351
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given  Выбрать Пользовательские справочники",
+      "time" : {
+        "start" : 1542117623208,
+        "stop" : 1542117641756,
+        "duration" : 18548
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "When  Справочник банков",
+      "time" : {
+        "start" : 1542117641760,
+        "stop" : 1542117646959,
+        "duration" : 5199
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then  Загрузилась информация про банки",
+      "time" : {
+        "start" : 1542117646962,
+        "stop" : 1542117647171,
+        "duration" : 209
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "after",
+      "time" : {
+        "start" : 1542117647172,
+        "stop" : 1542117648054,
+        "duration" : 882
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Тест для тестирования модуля \"Пользовательские справочники\""
+  }, {
+    "name" : "story",
+    "value" : "Проверка модуля Пользовательские справочники"
+  }, {
+    "name" : "tag",
+    "value" : "accept"
+  }, {
+    "name" : "tag",
+    "value" : "deb"
+  }, {
+    "name" : "host",
+    "value" : "RAND-54"
+  }, {
+    "name" : "package",
+    "value" : "Тест для тестирования модуля \"Пользовательские справочники\""
+  }, {
+    "name" : "suite",
+    "value" : "Тест для тестирования модуля \"Пользовательские справочники\""
+  }, {
+    "name" : "testClass",
+    "value" : "Проверка модуля Пользовательские справочники"
+  }, {
+    "name" : "thread",
+    "value" : "16868@RAND-54.main(1)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "7b26317f05cfc639",
+      "status" : "passed",
+      "time" : {
+        "start" : 1542117142454,
+        "stop" : 1542117172165,
+        "duration" : 29711
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ "deb", "accept" ]
+  },
+  "source" : "5e3099cfbe074838.json",
+  "parameterValues" : [ ]
+}

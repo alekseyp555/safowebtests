@@ -1,0 +1,169 @@
+{
+  "uid" : "1ffdd8863960f3b1",
+  "name" : "Проверка модуля Рабочий календарь",
+  "historyId" : "767318b49d345a9b7fcd2083c027c177",
+  "time" : {
+    "start" : 1542119454362,
+    "stop" : 1542119485260,
+    "duration" : 30898
+  },
+  "description" : "При клике на календарь отображается информация о календаре",
+  "descriptionHtml" : "<p>При клике на календарь отображается информация о календаре</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "При клике на календарь отображается информация о календаре",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "before",
+      "time" : {
+        "start" : 1542119454369,
+        "stop" : 1542119459102,
+        "duration" : 4733
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given  Выбрать Рабочий календарь",
+      "time" : {
+        "start" : 1542119459104,
+        "stop" : 1542119477633,
+        "duration" : 18529
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "When  Клик на год календаря",
+      "time" : {
+        "start" : 1542119477636,
+        "stop" : 1542119477901,
+        "duration" : 265
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "And  Выбрать 2016 год",
+      "time" : {
+        "start" : 1542119477902,
+        "stop" : 1542119484408,
+        "duration" : 6506
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then  Отобразился 2016 год",
+      "time" : {
+        "start" : 1542119484408,
+        "stop" : 1542119484422,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "after",
+      "time" : {
+        "start" : 1542119484423,
+        "stop" : 1542119485241,
+        "duration" : 818
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Тест для тестирования модуля \"Рабочий календарь\""
+  }, {
+    "name" : "story",
+    "value" : "Проверка модуля Рабочий календарь"
+  }, {
+    "name" : "tag",
+    "value" : "accept"
+  }, {
+    "name" : "tag",
+    "value" : "deb"
+  }, {
+    "name" : "host",
+    "value" : "RAND-54"
+  }, {
+    "name" : "package",
+    "value" : "Тест для тестирования модуля \"Рабочий календарь\""
+  }, {
+    "name" : "suite",
+    "value" : "Тест для тестирования модуля \"Рабочий календарь\""
+  }, {
+    "name" : "testClass",
+    "value" : "Проверка модуля Рабочий календарь"
+  }, {
+    "name" : "thread",
+    "value" : "6328@RAND-54.main(1)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "95e95f205240df3b",
+      "status" : "skipped",
+      "statusDetails" : "TODO: implement me",
+      "time" : {
+        "start" : 1542118737942,
+        "stop" : 1542118743373,
+        "duration" : 5431
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ "deb", "accept" ]
+  },
+  "source" : "1ffdd8863960f3b1.json",
+  "parameterValues" : [ ]
+}
