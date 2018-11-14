@@ -6,11 +6,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 
 import java.util.concurrent.TimeUnit;
+
+import static org.testng.Assert.assertEquals;
 
 @Description("Проверка модуля бизнес продукты")
 @Test
@@ -67,7 +68,7 @@ public class BusinessProdTests extends TestBase {
         driver.findElement(By.xpath("//li[6]/a[2]/em")).click();
         String tab6 = driver.findElement(By.xpath("//li[6]/a[2]/em")).getText();
         System.out.println("Вкладка " + tab6);
-        Assert.assertEquals("Верификация", tab6); //проверяем вкладка Верификация
+        assertEquals("Верификация", tab6); //проверяем вкладка Верификация
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
 

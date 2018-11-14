@@ -10,14 +10,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 import java.util.concurrent.TimeUnit;
-
 import static org.testng.Assert.assertEquals;
 
 @Description("Login scenario for SAFO Web")
 @Test
 public class LoginValidTests extends TestBase {
 
-    private WebDriver driver;
+    private WebDriver driver = app.getDriver();
 
     public LoginValidTests() {
         this.driver = app.getDriver();
