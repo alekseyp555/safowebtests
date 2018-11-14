@@ -32,8 +32,8 @@ public class PolzovatelskieSpravochnikiTests extends TestBase {
         Thread.sleep(5000);
     }
 
-    @When("Справочник банков")
-    public void справочник_банков() throws InterruptedException {
+    @When("Клик Справочник банков")
+    public void клик_Справочник_банков() throws InterruptedException {
         app.driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(14)")).click(); //клик на Справочник банков
         app.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);

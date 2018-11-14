@@ -7,7 +7,6 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
-
 import java.util.concurrent.TimeUnit;
 
 @Description("Проверка модуля клиентский менеджер")

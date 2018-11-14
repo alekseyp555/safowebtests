@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package utility;
 
@@ -18,7 +18,6 @@ public class Hook {
     private final ApplicationManager app = new ApplicationManager();
     //protected static final ApplicationManager app = new ApplicationManager();
 
-    //@BeforeSuite
     @BeforeSuite
     public void setUp (ITestContext context)    {
         context.setAttribute("app", app);
@@ -46,8 +45,7 @@ public class Hook {
     @After
 	public void tearDown(Scenario scenario)
 	{
-        app.stop(scenario);
-
+	    app.stop(scenario);
     }
 
     public ApplicationManager getApp() {

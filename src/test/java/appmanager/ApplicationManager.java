@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
@@ -71,11 +72,12 @@ public class ApplicationManager {
             }
         }
     }
-
     public void init(Scenario scenario) {
     //public void init() {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers//chromedriver.exe");
-        driver= new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-maximized");
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         System.out.println("----------------------------------------------------");
         System.out.println("Starting - " + scenario.getName());
