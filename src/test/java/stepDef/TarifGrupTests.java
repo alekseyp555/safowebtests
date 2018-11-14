@@ -5,7 +5,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 import java.util.concurrent.TimeUnit;
@@ -44,7 +43,7 @@ public class TarifGrupTests extends TestBase {
     @Then("Тарифные группы отобразились")
     public void тарифные_группы_отобразились() {
         String text = app.driver.findElement(By.xpath("//div[2]/table/tbody/tr/td[2]/div")).getText();
-        System.out.println("Имя 2го элемента = " + text);
+        System.out.println("Имя 2го элемента " + text);
         assertEquals("Комиссия за факторинговое обслуживание", text);
     }
 }
