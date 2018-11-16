@@ -104,3 +104,5 @@ target/RunCuke/cucumber.html/report.js
 target/RunCuke/cucumber.html/jquery-1.8.2.min.js
 target/RunCuke/cucumber.html/index.html
 target/RunCuke/cucumber.html/formatter.js
+*.txt
+*.log

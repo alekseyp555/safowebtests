@@ -10,6 +10,7 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'io.qameta.allure'
+compileJava.options.encoding = 'UTF-8'
 
 group 'safowebtest'
 version '1.0-SNAPSHOT'
@@ -36,6 +37,7 @@ dependencies {
     compile 'io.qameta.allure:allure-cucumber3-jvm:2.7.0'
     agent 'org.aspectj:aspectjweaver:1.9.2'
     compile 'ru.yandex.qatools.allure:allure-testng-adaptor:1.5.4'
+    compile 'ch.qos.logback:logback-classic:1.2.3'
 }
 
 task cucumber() {
@@ -64,6 +66,19 @@ tasks.withType(Test) {
         events "started", "skipped", "passed", "failed"
         showStandardStreams true
     }
+}
+
+//для логгирования тестов
+test {
+    testLogging {
+        outputs.upToDateWhen {false}
+        showStandardStreams = true
+    }
+}
+
+//для кириллицы ч2
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
 
 allure {

@@ -10,10 +10,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
+
+    Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
+
     public static WebDriver driver;
 
     public ApplicationManager() {
@@ -22,6 +27,13 @@ public class ApplicationManager {
 
     public static WebDriver getDriver () {
 	    return driver;
+    }
+
+    public void logTestStart (Scenario scenario) {
+        logger.info("Start test " +  scenario.getName());
+    }
+    public void logTestStop(Scenario scenario) {
+        logger.info("Stop test " +  scenario.getName());
     }
 
     public void waitForPageLoadComplete(WebDriver driver) {
@@ -61,7 +73,7 @@ public class ApplicationManager {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ждем
         //WebElement kalendar = driver.findElement(By.cssSelector("#ext-comp-1860")); //локатор для таблицы
         //WebElement kalendar = driver.findElement(By.id("ext-comp-1862")); //не работает
-        WebElement kalendar = driver.findElement(By.xpath("//*[@id='ext-comp-1862']/ul/li/div/table/tbody")); //валидный xpath для календаря
+        WebElement kalendar = driver.findElement(By.xpath("//*[@id='ext-comp-1860']/ul/li/div/table/tbody")); //валидный xpath для календаря раньше был ext 1862!!!
         List<WebElement> rows = kalendar.findElements(By.tagName("tr")); //поиск строк
         List <WebElement> columns = kalendar.findElements(By.tagName("td")); //поиск столбцов
         for (WebElement cell: columns){
@@ -72,6 +84,14 @@ public class ApplicationManager {
             }
         }
     }
+
+    public void setDatepicker(WebDriver driver, String cssSelector, String date) {
+        new WebDriverWait(driver, 30000).until(
+                (WebDriver d) -> d.findElement(By.cssSelector(cssSelector)).isDisplayed());
+        JavascriptExecutor.class.cast(driver).executeScript(
+                String.format("$('%s').datepicker('setDate', '%s')", cssSelector, date));
+    }
+
     public void init(Scenario scenario) {
     //public void init() {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers//chromedriver.exe");
@@ -79,6 +99,7 @@ public class ApplicationManager {
         options.addArguments("--start-maximized");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        logger.info("Start test " +  scenario.getName());
         System.out.println("----------------------------------------------------");
         System.out.println("Starting - " + scenario.getName());
         System.out.println("----------------------------------------------------");
@@ -86,6 +107,7 @@ public class ApplicationManager {
 
     public void stop(Scenario scenario) {
         driver.quit();
+        logger.info("Stop test " +  scenario.getName() + " - " + scenario.getStatus());
         System.out.println("--------------------------------------------------");
         if (scenario.getStatus() == Result.Type.PASSED) {
           System.out.println(scenario.getName() + " Status - " + scenario.getStatus());

@@ -6,6 +6,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
@@ -19,7 +21,7 @@ public class LoginValidTests extends TestBase {
     private WebDriver driver = app.getDriver();
 
     public LoginValidTests() {
-        this.driver = app.getDriver();
+
     }
 
     @Given("navigate to SAFO web page")

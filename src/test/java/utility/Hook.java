@@ -7,10 +7,17 @@ import appmanager.ApplicationManager;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.ITestContext;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import stepDef.MyTestListener;
+import stepDef.TestBase;
+
+import java.lang.reflect.Method;
 
 @Listeners(MyTestListener.class)
 public class Hook {
@@ -23,10 +30,13 @@ public class Hook {
         context.setAttribute("app", app);
     }
 
+
+
     @Before
 	public void setUp(Scenario scenario)
 	{
         app.init(scenario);
+
     }
 
     /*
@@ -51,4 +61,5 @@ public class Hook {
     public ApplicationManager getApp() {
         return app;
     }
+
 }
