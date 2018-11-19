@@ -17,7 +17,7 @@ import cucumber.api.CucumberOptions;
 					,glue={"stepDef","utility"}
 					//,plugin = {"pretty", "html:target/cucumber"}
 					,plugin = {"io.qameta.allure.cucumber3jvm.AllureCucumber3Jvm", "pretty", "json:target/cucumber-report/report.json"}
-					,tags ={"@accept"}
+					,tags ={"@deb"}
 		)
 @Test
 public class RunTest extends AbstractTestNGCucumberTests {

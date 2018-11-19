@@ -24,7 +24,7 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
         app.login();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
-        app.waitForPageLoadComplete(ApplicationManager.driver);
+        app.waitForPageLoadComplete(driver);
         app.selectPusk(); //клик пуск
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.selectSpravochnik(); //выбор справочники

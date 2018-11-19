@@ -52,7 +52,7 @@ public class ApplicationManager {
         options.addArguments("--start-maximized"); //браузер разворачиваем чтобы все элементы поместились
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        logger.info("Start test " +  scenario.getName());
+        //logger.info("Start test " +  scenario.getName());
         System.out.println("----------------------------------------------------");
         System.out.println("Starting - " + scenario.getName());
         System.out.println("----------------------------------------------------");
@@ -60,12 +60,15 @@ public class ApplicationManager {
 
     public void stop(Scenario scenario) {
         driver.quit();
-        logger.info("Stop test " +  scenario.getName() + " - " + scenario.getStatus());
+        //logger.info("Stop test " +  scenario.getName() + " - " + scenario.getStatus());
         System.out.println("--------------------------------------------------");
-        if (scenario.getStatus() == Result.Type.PASSED) {
-            System.out.println(scenario.getName() + " Status - " + scenario.getStatus());
-        } else System.err.println(scenario.getName() + " Status - " + scenario.getStatus());
-        System.out.println("--------------------------------------------------");
+        if (scenario.getStatus() != Result.Type.PASSED) {
+            //System.out.println(scenario.getName() + " status - " + scenario.getStatus());
+            logger.info("Scenario " + scenario.getName() + " status " + scenario.getStatus());
+            //} else logger.info("Scenario " +  scenario.getName() + " status " + scenario.getStatus());
+            //System.err.println(scenario.getName() + " status - " + scenario.getStatus());
+            System.out.println("--------------------------------------------------");
+        }
     }
 
     public void waitForPageLoadComplete(WebDriver driver) {
@@ -83,6 +86,7 @@ public class ApplicationManager {
         driver.findElement(By.id("user")).click();
         driver.findElement(By.id("user")).clear();
         driver.findElement(By.id("user")).sendKeys(properties.getProperty("web.login"));
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Thread.sleep(5000);
         driver.findElement(By.id("pass")).click();
         driver.findElement(By.id("pass")).clear();
