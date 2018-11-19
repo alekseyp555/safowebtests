@@ -18,7 +18,7 @@ public class ZnacheniaStavokTests extends TestBase {
 
     public ZnacheniaStavokTests () throws Throwable {
         super();
-        app.login("ABPak@sbfc.ru", "Makaka123");
+        app.login();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
         app.waitForPageLoadComplete(driver);

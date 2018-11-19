@@ -6,8 +6,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 
@@ -23,7 +21,7 @@ public class BusinessProdTests extends TestBase {
 
         public BusinessProdTests () throws Throwable {
         super();
-        app.login("ABPak@sbfc.ru", "Makaka123");
+        app.login();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
         app.waitForPageLoadComplete(ApplicationManager.driver);

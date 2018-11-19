@@ -18,7 +18,7 @@ public class HierarchyLimitTests extends TestBase {
 
     public HierarchyLimitTests() throws Throwable {
         super();
-        app.login("ABPak@sbfc.ru", "Makaka123");
+        app.login();
         app.waitForPageLoadComplete(ApplicationManager.driver);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);

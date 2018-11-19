@@ -59,7 +59,11 @@ test {
     useTestNG() {
         suites 'src/test/resources/testng.xml'
     }
+    if(project.hasProperty('target')) {
+        systemProperty 'target', "${target}"
+    }
 }
+
 tasks.withType(Test) {
     testLogging {
         exceptionFormat "full"

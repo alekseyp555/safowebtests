@@ -106,3 +106,4 @@ target/RunCuke/cucumber.html/index.html
 target/RunCuke/cucumber.html/formatter.js
 *.txt
 *.log
+.idea/workspace.xml

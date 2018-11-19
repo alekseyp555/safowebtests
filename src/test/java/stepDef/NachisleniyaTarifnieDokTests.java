@@ -21,7 +21,7 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
 
     public NachisleniyaTarifnieDokTests () throws Throwable {
         super();
-        app.login("ABPak@sbfc.ru", "Makaka123");
+        app.login();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
         app.waitForPageLoadComplete(ApplicationManager.driver);

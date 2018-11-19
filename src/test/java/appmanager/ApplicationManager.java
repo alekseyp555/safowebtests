@@ -12,17 +12,24 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
+    private final Properties properties;
     Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
 
     public static WebDriver driver;
 
-    public ApplicationManager() {
+    public ApplicationManager()  {
         this.driver = ApplicationManager.getDriver();
+        properties = new Properties();
     }
 
     public static WebDriver getDriver () {
@@ -36,21 +43,50 @@ public class ApplicationManager {
         logger.info("Stop test " +  scenario.getName());
     }
 
+
+    public void init(Scenario scenario) throws IOException {
+        //public void init() {
+        //указываем папку для драйвера
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers//chromedriver.exe");
+        ChromeOptions options = new ChromeOptions(); //
+        options.addArguments("--start-maximized"); //браузер разворачиваем чтобы все элементы поместились
+        driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        logger.info("Start test " +  scenario.getName());
+        System.out.println("----------------------------------------------------");
+        System.out.println("Starting - " + scenario.getName());
+        System.out.println("----------------------------------------------------");
+    }
+
+    public void stop(Scenario scenario) {
+        driver.quit();
+        logger.info("Stop test " +  scenario.getName() + " - " + scenario.getStatus());
+        System.out.println("--------------------------------------------------");
+        if (scenario.getStatus() == Result.Type.PASSED) {
+            System.out.println(scenario.getName() + " Status - " + scenario.getStatus());
+        } else System.err.println(scenario.getName() + " Status - " + scenario.getStatus());
+        System.out.println("--------------------------------------------------");
+    }
+
     public void waitForPageLoadComplete(WebDriver driver) {
         new WebDriverWait(driver,30).until((ExpectedCondition<Boolean>) wd ->
                 ((JavascriptExecutor) driver).executeScript("return document.readyState")
                 .equals("complete"));
     }
 
-    public void login(String username, String password) throws Throwable{
-        driver.get("http://bugs-kz/login.html");
+    public void login() throws Throwable{
+        //чтение данных из файла
+        String target = System.getProperty("target", "local");
+        properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
+        driver.get(properties.getProperty("web.baseUrl"));
+        //driver.get("http://bugs-kz/login.html");
         driver.findElement(By.id("user")).click();
         driver.findElement(By.id("user")).clear();
-        driver.findElement(By.id("user")).sendKeys(username);
+        driver.findElement(By.id("user")).sendKeys(properties.getProperty("web.login"));
         Thread.sleep(5000);
         driver.findElement(By.id("pass")).click();
         driver.findElement(By.id("pass")).clear();
-        driver.findElement(By.id("pass")).sendKeys(password);
+        driver.findElement(By.id("pass")).sendKeys( properties.getProperty("web.password"));
         driver.findElement(By.xpath("//button")).click();
     }
 
@@ -92,26 +128,4 @@ public class ApplicationManager {
                 String.format("$('%s').datepicker('setDate', '%s')", cssSelector, date));
     }
 
-    public void init(Scenario scenario) {
-    //public void init() {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers//chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-        driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        logger.info("Start test " +  scenario.getName());
-        System.out.println("----------------------------------------------------");
-        System.out.println("Starting - " + scenario.getName());
-        System.out.println("----------------------------------------------------");
-    }
-
-    public void stop(Scenario scenario) {
-        driver.quit();
-        logger.info("Stop test " +  scenario.getName() + " - " + scenario.getStatus());
-        System.out.println("--------------------------------------------------");
-        if (scenario.getStatus() == Result.Type.PASSED) {
-          System.out.println(scenario.getName() + " Status - " + scenario.getStatus());
-        } else System.err.println(scenario.getName() + " Status - " + scenario.getStatus());
-        System.out.println("--------------------------------------------------");
-    }
 }

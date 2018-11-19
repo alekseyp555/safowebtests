@@ -6,12 +6,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
+
 import java.util.concurrent.TimeUnit;
+
 import static org.testng.Assert.assertEquals;
 
 @Description("Login scenario for SAFO Web")
