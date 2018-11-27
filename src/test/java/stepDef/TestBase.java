@@ -1,23 +1,15 @@
 package stepDef;
 
 import appmanager.ApplicationManager;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Listeners;
 
 @Listeners(MyTestListener.class)
 public class TestBase {
 
-    protected final ApplicationManager app;
+    //private ChromeDriver driver;
 
-    public TestBase() {
-        app = new ApplicationManager();
-    }
-
-    public byte[] takeScreenshot() {
-        return ((TakesScreenshot) ApplicationManager.driver).getScreenshotAs(OutputType.BYTES);
-    }
-
+    protected static final ApplicationManager app = new ApplicationManager();
     public ApplicationManager getApp() {
         return app;
     }

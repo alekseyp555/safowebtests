@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 @Description("Проверка модуля Значения ставок")
 @Test
 public class ZnacheniaStavokTests extends TestBase {
-
+    //private ChromeDriver driver;
     private WebDriver driver = app.getDriver();
 
     public ZnacheniaStavokTests () throws Throwable {
@@ -37,7 +37,7 @@ public class ZnacheniaStavokTests extends TestBase {
     @When("Клик на прогнозные курсы валют для лимитов")
     public void клик_на_прогнозные_курсы_валют_для_лимитов() throws InterruptedException {
         driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(10)")).click(); //выбираем 10 элемент в списке БП
-        app.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
     }
 

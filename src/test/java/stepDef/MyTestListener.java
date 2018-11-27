@@ -1,5 +1,6 @@
 package stepDef;
 
+import appmanager.ApplicationManager;
 import io.qameta.allure.Attachment;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -19,7 +20,7 @@ public class MyTestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        TestBase app = (TestBase) result.getTestContext().getAttribute("app");
+        ApplicationManager app = (ApplicationManager) result.getTestContext().getAttribute("app");
         saveScreenshot(app.takeScreenshot());
     }
 

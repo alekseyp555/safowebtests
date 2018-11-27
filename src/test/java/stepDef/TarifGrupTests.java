@@ -5,6 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 
@@ -15,7 +16,7 @@ import static org.testng.Assert.assertEquals;
 @Description("Проверка модуля тарифные группы")
 @Test
 public class TarifGrupTests extends TestBase {
-
+    //private ChromeDriver driver;
     private WebDriver driver = app.getDriver();
 
     public TarifGrupTests () throws Throwable {
@@ -45,7 +46,7 @@ public class TarifGrupTests extends TestBase {
 
     @Then("Тарифные группы отобразились")
     public void тарифные_группы_отобразились() {
-        String text = app.driver.findElement(By.xpath("//div[2]/table/tbody/tr/td[2]/div")).getText();
+        String text = driver.findElement(By.xpath("//div[2]/table/tbody/tr/td[2]/div")).getText();
         System.out.println("Имя 2го элемента " + text);
         assertEquals("Комиссия за факторинговое обслуживание", text);
     }

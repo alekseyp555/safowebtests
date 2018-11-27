@@ -1,11 +1,13 @@
 package stepDef;
 
 import appmanager.ApplicationManager;
+import appmanager.SpravochnikHelper;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 import java.util.concurrent.TimeUnit;
@@ -13,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 @Description("Проверка модуля Иерархия лимитов")
 @Test
 public class HierarchyLimitTests extends TestBase {
-
+    //private ChromeDriver driver;
     private WebDriver driver = app.getDriver();
 
     public HierarchyLimitTests() throws Throwable {
@@ -38,7 +40,7 @@ public class HierarchyLimitTests extends TestBase {
 
     @When("выбрали лимит")
     public void выбрали_лимит() {
-        app.waitForPageLoadComplete(ApplicationManager.driver);
+        app.waitForPageLoadComplete(driver);
     }
 
     @Then("загрузились свойства лимитов: Общие, дополнительно")

@@ -5,6 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 import java.util.concurrent.TimeUnit;
@@ -12,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 @Description("Проверка модуля Проверочные массивы финансового мониторинга")
 @Test
 public class PMFMTests extends TestBase {
+    //private ChromeDriver driver;
     private WebDriver driver = app.getDriver();
 
     public PMFMTests() throws Throwable {

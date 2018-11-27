@@ -8,15 +8,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
-
 import java.util.concurrent.TimeUnit;
-
 import static org.testng.Assert.assertEquals;
 
 @Description("Проверка модуля бизнес продукты")
-@Test
+@Test(retryAnalyzer = MyRetry.class)
+
 public class BusinessProdTests extends TestBase {
 
+
+    //private ChromeDriver driver;
         private WebDriver driver = app.getDriver();
 
         public BusinessProdTests () throws Throwable {
@@ -24,22 +25,22 @@ public class BusinessProdTests extends TestBase {
         app.login();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
-        app.waitForPageLoadComplete(ApplicationManager.driver);
+        app.waitForPageLoadComplete(driver);
         app.selectPusk(); //клик пуск
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.selectSpravochnik(); //выбор справочники
     }
 
     @Given("Выбрать Бизнес-продукты")
-    public void выбрать_Бизнес_продукты() throws InterruptedException {
-        app.driver.findElement(By.id("ext-comp-1061")).click(); //Клик на БП
+    public void selectBusinessProduct() throws InterruptedException {
+        driver.findElement(By.id("ext-comp-1061")).click(); //Клик на БП
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         //driver.findElement(By.xpath("//div[12]/ul/li/a/span")).click(); //Xpath клик на бизнес продукты
         Thread.sleep(5000);
     }
 
     @When("Выбрать Агентский факторинг без права регресса")
-    public void выбрать_Агентский_факторинг_без_права_регресса() throws InterruptedException {
+    public void selectAgentFactoringNoRegression() throws InterruptedException {
         //driver.findElement(By.xpath("//div[3]/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div/div[2]")).click(); //клик по бизнес продукту
         driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")).click(); //выбираем второй элемент в списке БП
         //driver.findElement(By.cssSelector("div[class*=x-grid3-row]:first-child")).click(); //выбираем первый элемент в списке БП
@@ -49,7 +50,7 @@ public class BusinessProdTests extends TestBase {
     }
 
     @Then("загрузились информация: описание продукта, схема обслуживания, сроки, тарифный план, лимитная политика, верификация")
-    public void загрузились_информация_описание_продукта_схема_обслуживания_сроки_тарифный_план_лимитная_политика_верификация() throws InterruptedException {
+    public void informationLoad() throws InterruptedException {
         // клики по вкладкам бизнес продуктам
         //driver.findElement(By.xpath("//span/span")).click();
         driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click();

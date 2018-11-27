@@ -6,6 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 import java.util.concurrent.TimeUnit;
@@ -13,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 @Description("Проверка модуля контрагенты")
 @Test
 public class ContrAgentsTests extends TestBase{
+    //private ChromeDriver driver;
     private WebDriver driver = app.getDriver();
 
     public ContrAgentsTests () throws  Throwable{
@@ -43,7 +45,7 @@ public class ContrAgentsTests extends TestBase{
 
     @Then("Список контрагентов появился")
     public void список_контрагентов_появился() {
-        app.waitForPageLoadComplete(ApplicationManager.driver);
+        app.waitForPageLoadComplete(driver);
     }
 
     @Then("Выбрать контрагента")
@@ -55,7 +57,7 @@ public class ContrAgentsTests extends TestBase{
 
     @Then("Загрузились свойства контрагента")
     public void загрузились_свойства_контрагента() {
-        app.waitForPageLoadComplete(ApplicationManager.driver);
+        app.waitForPageLoadComplete(driver);
     }
 
     @Then("Клик Общие сведения, Дополнительно, Лимиты, Договора, Банковские реквизиты контрагента")

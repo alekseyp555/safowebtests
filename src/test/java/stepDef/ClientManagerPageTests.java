@@ -7,13 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
-
 import java.util.concurrent.TimeUnit;
 
 @Description("Проверка модуля клиентский менеджер")
 @Test
 public class ClientManagerPageTests extends TestBase {
-
+    //private ChromeDriver driver;
     private WebDriver driver = app.getDriver();
 
     public ClientManagerPageTests () throws Throwable {

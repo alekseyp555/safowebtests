@@ -6,6 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +15,7 @@ import static org.testng.Assert.assertEquals;
 @Description("Проверка модуля клиентский менеджер")
 @Test
 public class FaktorChems extends TestBase {
-
+    //private ChromeDriver driver;
     private WebDriver driver = app.getDriver();
 
     public FaktorChems () throws Throwable {
@@ -45,7 +46,7 @@ public class FaktorChems extends TestBase {
     @Then("Свойства отобразились: Общие сведения, договоры, лимиты")
     public void свойства_отобразились_Общие_сведения_договоры_лимиты() throws InterruptedException {
         driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click(); //Клик Договоры
-        String tab2 = app.driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).getText();
+        String tab2 = driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).getText();
         assertEquals("Договоры", tab2); //Проверяем вкладку Договоры
         System.out.println("Имя вкладки - " + tab2);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
