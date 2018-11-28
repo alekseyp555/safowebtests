@@ -49,8 +49,8 @@ public class Hook {
 
     }
 
-    public ApplicationManager getApp() {
-        return app;
-    }
+   // public ApplicationManager getApp() {
+     //   return app;
+    //}
 
 }

@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 @Listeners(MyTestListener.class)
 public class ApplicationManager {
 
-    public static WebDriver driver;
+    public static ChromeDriver driver;
     //ChromeDriver driver;
 
     public ApplicationManager()  {
@@ -42,7 +42,7 @@ public class ApplicationManager {
 
     Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
 
-    public static WebDriver getDriver () {
+    public static ChromeDriver getDriver () {
 	    return driver;
     }
 
@@ -67,6 +67,7 @@ public class ApplicationManager {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         //logger.info("Start test " +  scenario.getName());
         //spravochnikHelper = new SpravochnikHelper(driver);
+        operationsHelper = new OperationsHelper(driver);
         System.out.println("----------------------------------------------");
         System.out.println("Starting - " + scenario.getName());
         System.out.println("----------------------------------------------");

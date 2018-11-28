@@ -1,18 +1,15 @@
 package stepDef;
 
 import appmanager.OperationsHelper;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
-import java.util.concurrent.TimeUnit;
 
+import java.util.concurrent.TimeUnit;
 
 @Description("Проверка модуля бизнес продукты")
 @Test(retryAnalyzer = MyRetry.class)
@@ -29,17 +26,18 @@ public class BPMTests extends TestBase {
         app.selectPusk(); //клик пуск
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.selectOperaciy(); //выбрать операции
+        //app.getOperationsHelper().selectOperaciy();
     }
 
-    @Given("Выбрать модуль BPM")
-    public void выбрать_модуль_BPM() throws InterruptedException {
+    @Given("^Выбрать модуль BPM$")
+    public void selectBPM() throws InterruptedException {
         driver.findElement(By.id("ext-comp-1045")).click(); //Клик на BPM
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
     }
 
-    @When("Выбрать все заявки")
-    public void выбрать_все_заявки() throws InterruptedException {
+    @When("^Выбрать все заявки$")
+    public void selectAllQueries() throws InterruptedException {
         app.zayavki_all();
         //String element = driver.findElement(By.cssSelector("div#ext-comp-2597> div > div > div > div > div > div > div > div:nth-child(5)")).getText();// css имя 5й компании в списке заявок
         //String element = driver.findElement(By.xpath("//div[@id='ext-comp-6017']/div/div/div/div/div/div/div[5]")).getText();//xpath имя 5й компании в списке заявок
@@ -57,10 +55,8 @@ public class BPMTests extends TestBase {
         app.waitForPageLoadComplete(driver);
     }
 
-
-
-    @Then("Загрузились все заявки")
-    public void загрузились_все_заявки() throws InterruptedException {
+    @Then("^Загрузились все заявки$")
+    public void loadAllQueries() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
     }
