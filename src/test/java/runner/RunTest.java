@@ -27,7 +27,7 @@ import cucumber.api.CucumberOptions;
 					//,plugin = {"pretty", "html:target/cucumber"}
 					//,plugin = {"io.qameta.allure.cucumber3jvm.AllureCucumber3Jvm", "pretty", "json:target/cucumber-report/report.json"}
 					,plugin = {"io.qameta.allure.cucumber3jvm.AllureCucumber3Jvm", "pretty", "html:target/cucumber", "rerun:target/rerun.txt"}
-					,tags ={"@accept"}
+					,tags ={"@deb"}
 		)
 
 @Test

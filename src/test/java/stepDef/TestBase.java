@@ -1,7 +1,6 @@
 package stepDef;
 
 import appmanager.ApplicationManager;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Listeners;
 
 @Listeners(MyTestListener.class)

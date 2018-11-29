@@ -57,7 +57,7 @@ public class ApplicationManager {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
-    public void init(Scenario scenario) throws IOException {
+    public void init(Scenario scenario) {
         //public void init() {
         //указываем папку для драйвера
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers//chromedriver.exe");
@@ -151,7 +151,7 @@ public class ApplicationManager {
        driver.findElement(By.cssSelector("#ext-comp-1043")).click(); //выбрать операции в пуске
     }
 
-    public void mainBPM() {
+    public void startPageOperations() {
         driver.findElement(By.xpath("//span/span")).click();
     }
     public void zayavki_change() throws InterruptedException {
@@ -187,7 +187,7 @@ public class ApplicationManager {
         Thread.sleep(5000);
         //driver.findElement(By.cssSelector("div#ext-comp-2597> div > div > div > div > div > div > div > div:nth-child(5)")); //клик на 5ю строку в таблице
         //driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div[2]/div/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div/div[6]/table/tbody/tr/td[5]/div")).click(); // запрос
-        driver.findElement(By.xpath("//div[5]/table/tbody/tr/td[2]/div")).click(); //клик на 5 элемент
+        driver.findElement(By.xpath("//div[4]/table/tbody/tr/td[2]/div")).click(); //клик на 5 элемент
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         WebElement element = driver.findElement(By.xpath("//div[2]/div/div/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div/table/tbody/tr/td[3]/div"));
         Thread.sleep(5000);

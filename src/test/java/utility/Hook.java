@@ -11,13 +11,14 @@ import org.testng.ITestContext;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import stepDef.MyTestListener;
+
 import java.io.IOException;
 
 @Listeners(MyTestListener.class)
 public class Hook {
 
-    private final ApplicationManager app = new ApplicationManager();
-    //protected static final ApplicationManager app = new ApplicationManager();
+    //private final ApplicationManager app = new ApplicationManager();
+    protected static final ApplicationManager app = new ApplicationManager();
 
     @BeforeSuite
     public void setUp (ITestContext context)    {
@@ -49,8 +50,8 @@ public class Hook {
 
     }
 
-   // public ApplicationManager getApp() {
-     //   return app;
-    //}
+    public ApplicationManager getApp() {
+       return app;
+    }
 
 }

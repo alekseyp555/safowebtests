@@ -11,7 +11,7 @@ import ru.yandex.qatools.allure.annotations.Description;
 
 import java.util.concurrent.TimeUnit;
 
-@Description("Проверка модуля бизнес продукты")
+@Description("Проверка модуля BPM")
 @Test(retryAnalyzer = MyRetry.class)
 public class BPMTests extends TestBase {
 
@@ -48,9 +48,9 @@ public class BPMTests extends TestBase {
         //driver.findElement(By.xpath("//span/span")).click();
         Thread.sleep(5000);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        app.mainBPM(); //возврат на стартовую BPM
+        app.startPageOperations(); //возврат на стартовую BPM
         app.zayavki_change();
-        app.mainBPM(); //возврат на стартовую BPM
+        app.startPageOperations(); //возврат на стартовую BPM
         app.zayavki_active();
         app.waitForPageLoadComplete(driver);
     }
