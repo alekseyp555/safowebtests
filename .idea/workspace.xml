@@ -115,12 +115,13 @@
           <entry key="project.closed" value="9" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -160,7 +161,7 @@
           <entry key="dummy" value="74" />
           <entry key="feature" value="4309" />
           <entry key="gradle" value="484" />
-          <entry key="java" value="18271" />
+          <entry key="java" value="18756" />
           <entry key="properties" value="116" />
           <entry key="substeps" value="27" />
           <entry key="xml" value="90" />
@@ -170,7 +171,7 @@
         <counts>
           <entry key="Cucumber" value="1386" />
           <entry key="Groovy" value="484" />
-          <entry key="JAVA" value="18270" />
+          <entry key="JAVA" value="18755" />
           <entry key="PLAIN_TEXT" value="74" />
           <entry key="Properties" value="116" />
           <entry key="RegExp" value="1" />
@@ -188,13 +189,11 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
-              <caret line="153" column="16" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+              <caret line="150" selection-start-line="150" selection-end-line="150" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1057#1058#0" expanded="true" />
                 <element signature="e#1097#1098#0" expanded="true" />
-                <element signature="e#7080#7081#0" expanded="true" />
-                <element signature="e#7147#7148#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -203,7 +202,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/BPMTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
+            <state relative-caret-position="731">
               <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -215,8 +214,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/CRMTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="96" column="133" lean-forward="true" selection-start-line="96" selection-start-column="133" selection-end-line="96" selection-end-column="133" />
+            <state relative-caret-position="288">
+              <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -227,7 +226,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-testng/4.2.0/74446c7aa8c8a137b301f37a41bd2abe0d2a4c5d/cucumber-testng-4.2.0-sources.jar!/cucumber/api/testng/AbstractTestNGCucumberTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="272">
               <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
             </state>
           </provider>
@@ -706,6 +705,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -775,11 +775,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543500626963" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543577008946" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -1072,34 +1071,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunTest - 2018.11.29 at 16h 21m 06s.xml">
+    <history-entry file="RunTest - 2018.11.30 at 13h 08m 27s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTest - 2018.11.29 at 16h 49m 57s.xml">
+    <history-entry file="RunTest - 2018.11.30 at 13h 09m 52s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTest - 2018.11.29 at 16h 50m 52s.xml">
+    <history-entry file="RunTest - 2018.11.30 at 13h 13m 28s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTest - 2018.11.29 at 16h 53m 12s.xml">
+    <history-entry file="RunTest - 2018.11.30 at 13h 19m 57s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTest - 2018.11.29 at 16h 58m 03s.xml">
+    <history-entry file="RunTest - 2018.11.30 at 13h 33m 12s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTest - 2018.11.29 at 17h 00m 29s.xml">
+    <history-entry file="RunTest - 2018.11.30 at 13h 36m 50s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTest - 2018.11.29 at 17h 01m 54s.xml">
+    <history-entry file="RunTest - 2018.11.30 at 13h 41m 10s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTest - 2018.11.29 at 17h 03m 37s.xml">
+    <history-entry file="RunTest - 2018.11.30 at 13h 42m 36s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTest - 2018.11.29 at 17h 04m 35s.xml">
+    <history-entry file="RunTest - 2018.11.30 at 13h 59m 10s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RunTest - 2018.11.29 at 17h 06m 28s.xml">
+    <history-entry file="RunTest - 2018.11.30 at 14h 11m 44s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -1116,7 +1115,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1125,13 +1124,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49733475" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5778252" weight="0.39804772" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5772921" visible="true" weight="0.39804772" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4968017" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286334" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.42217484" side_tool="true" visible="true" weight="0.39804772" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.4227079" side_tool="true" visible="true" weight="0.39804772" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4989339" weight="0.3286334" />
       <window_info anchor="bottom" id="Build" order="10" sideWeight="0.49946696" weight="0.3286334" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49626866" weight="0.3286334" />
@@ -1318,9 +1317,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1328,9 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1357,9 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1423,9 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1433,9 +1420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1443,9 +1427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1453,9 +1434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="46" column="50" lean-forward="true" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1477,9 +1455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="49" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1501,9 +1476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1530,9 +1502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1632,7 +1601,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/BPMTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
+        <state relative-caret-position="731">
           <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1640,31 +1609,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-testng/4.2.0/74446c7aa8c8a137b301f37a41bd2abe0d2a4c5d/cucumber-testng-4.2.0-sources.jar!/cucumber/api/testng/AbstractTestNGCucumberTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
-          <caret line="153" column="16" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1057#1058#0" expanded="true" />
             <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#7080#7081#0" expanded="true" />
-            <element signature="e#7147#7148#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-testng/4.2.0/74446c7aa8c8a137b301f37a41bd2abe0d2a4c5d/cucumber-testng-4.2.0-sources.jar!/cucumber/api/testng/AbstractTestNGCucumberTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/CRMTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="96" column="133" lean-forward="true" selection-start-line="96" selection-start-column="133" selection-end-line="96" selection-end-column="133" />
+        <state relative-caret-position="288">
+          <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
