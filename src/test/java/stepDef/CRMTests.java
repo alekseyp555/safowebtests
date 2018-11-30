@@ -92,10 +92,7 @@ public class CRMTests extends TestBase {
     @Then("^Выбрать заявки в работе, выбрать 5й элемент$")
     public void selectActiveQueries() throws InterruptedException {
         app.startPageOperations(); //возврат на стартовую
-        WebElement inProgressRequest = driver.findElement(By.cssSelector("#requestList")); //Клик на рабочий список (ххх)
-        System.out.println(inProgressRequest.getText());
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        inProgressRequest.click(); //клик на ввод заявок
+        driver.findElement(By.cssSelector("#requestList")).click(); //клик на рабочий список (ххх)
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
         driver.findElement(By.cssSelector("#crm2-requestList-main > div > div > div > div > div > div > div > div > div:nth-child(5)")).click(); //клик на 5й элемет в таблице
