@@ -42,15 +42,15 @@ public class RabCalendarTests extends TestBase {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
-    @When("Выбрать {int} год")
-    public void выбрать_год(Integer int1) throws InterruptedException {
+    @When("^Выбрать 2016 год$")
+    public void selectYear() throws InterruptedException {
         driver.findElement(By.xpath("//div[15]/div/div[6]")).click(); //выбрать 2016 год
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }
 
-    @Then("Отобразился {int} год")
-    public void отобразился_год(Integer int1) {
+    @Then("Отобразился 2016 год$")
+    public void loadedYear() {
         app.waitForPageLoadComplete(driver);
     }
 }

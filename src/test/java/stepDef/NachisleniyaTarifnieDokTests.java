@@ -1,12 +1,10 @@
 package stepDef;
 
-import appmanager.ApplicationManager;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 import java.time.LocalDate;
@@ -15,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 @Description("Проверка модуля Начисления и тарифные документы")
 @Test
+
 public class NachisleniyaTarifnieDokTests extends TestBase{
 
     //private ChromeDriver driver;
@@ -39,13 +38,13 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
     }
 
     @When("Выбрали дату {localdate}")
-    public void выбрали_дату_с(LocalDate localdate) throws Throwable{
+        public void выбрали_дату(LocalDate localdate) throws InterruptedException {
         //driver.findElement(By.name("ch_dt1")).sendKeys("localdate"); //css locators
         driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).click(); //css locators
         driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).clear();
         //driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).sendKeys(localdate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"))); //дата 01.09.2018 смотреть фичу
 
-        app.getSpravochnikHelper().selectCalendarDate();
+        app.selectCalendarDate();
         //driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).sendKeys("localdate"); //дата 01.09.2018 смотреть фичу
         //driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).sendKeys("localdate");
         //driver.findElement(By.xpath("//div[3]/input")).click(); //xpath locators

@@ -148,7 +148,7 @@ public class CRMTests extends TestBase {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
     }
     @Then("^Загрузились отчеты$")
-    public void loadedQueries() throws InterruptedException {
+    public void loadedQueries() {
         //driver.findElement(By.xpath("//td/table/tbody[2]/tr/td/a/span")).click();
         driver.findElement(By.cssSelector("td > table > tbody:nth-of-type(2) > tr > td > a > span")).click(); //клик на отчет
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы

@@ -5,6 +5,7 @@ import cucumber.api.Scenario;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -127,11 +128,17 @@ public class ApplicationManager {
         //driver.findElement(By.id("ext-gen110")).click(); //not good xpath locator
         //driver.findElement(By.cssSelector("[class*=x-menu-list-item]:nth-of-type(6)")); //выбрать справочники
     }
-    public void selectCalendarDate() {
+    public void selectCalendarDate() throws InterruptedException {
         driver.findElement(By.xpath("//div[3]/img")).click(); //клик календарь
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ждем
-        driver.findElement(By.cssSelector("td.x-date-left")).click(); //css locator клик 1 месяц назад - октябрь
-        driver.findElement(By.cssSelector("td.x-date-left")).click(); //css locator клик 2 месяц назад - сентябрь
+        for (int i = 0; i < 3; i++) {
+            driver.findElement(By.cssSelector("td.x-date-left")).click(); //click 3 times
+            Thread.sleep(2000);
+        }
+        //Actions action = new Actions(driver);
+        //WebElement back = driver.findElement(By.cssSelector("td.x-date-left"));
+        //action.doubleClick(back).perform(); //клик 2р назад
+        //action.moveToElement(back).doubleClick().perform();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ждем
         //WebElement kalendar = driver.findElement(By.cssSelector("#ext-comp-1860")); //локатор для таблицы
         //WebElement kalendar = driver.findElement(By.id("ext-comp-1862")); //не работает
@@ -139,9 +146,9 @@ public class ApplicationManager {
         List<WebElement> rows = kalendar.findElements(By.tagName("tr")); //поиск строк
         List <WebElement> columns = kalendar.findElements(By.tagName("td")); //поиск столбцов
         for (WebElement cell: columns){
-            //Выбираем 10 число
-            if (cell.getText().equals("10")){
-                cell.findElement(By.linkText("10")).click();
+            //Выбираем 11 число
+            if (cell.getText().equals("11")){
+                cell.findElement(By.linkText("11")).click();
                 break;
             }
         }
