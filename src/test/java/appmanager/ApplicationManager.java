@@ -6,6 +6,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -97,9 +98,11 @@ public class ApplicationManager {
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
         driver.get(properties.getProperty("web.baseUrl"));
         //driver.get("http://bugs-kz/login.html");
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("user")))); //ожидание 10c
         type("user", properties.getProperty("web.login"));
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("pass")))); //ожидание 10c
         type("pass", properties.getProperty("web.password"));
         driver.findElement(By.xpath("//button")).click();
     }
@@ -199,6 +202,25 @@ public class ApplicationManager {
         waitForPageLoadComplete(driver);
         System.out.println(element.getText()); // имя в таблице
         element.click(); //клик на 2элемент в таблице
+    }
+
+
+    public void setDateOperations() throws InterruptedException {
+        for (int i = 0; i < 3 ; i++) {
+            driver.findElement(By.cssSelector("td.x-date-left")).click(); //click 3 times
+            Thread.sleep(2000);
+        }
+
+        WebElement kalendarOperations = driver.findElement(By.cssSelector("li > div > table > tbody > tr:nth-child(2) > td > table > tbody")); //валидный xpath для календаря раньше был ext 1862!!!
+        //List<WebElement> rows = kalendarOperations.findElements(By.tagName("tr")); //поиск строк
+        List<WebElement> columns = kalendarOperations.findElements(By.tagName("td")); //поиск столбцов
+        for (WebElement cell: columns){
+            //Выбираем 11 число
+            if (cell.getText().equals("11")){
+                cell.findElement(By.linkText("11")).click();
+                break;
+            }
+        }
     }
 
 }

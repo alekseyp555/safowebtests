@@ -48,35 +48,27 @@ public class Dok1CTests extends TestBase {
 
         driver.findElement(By.cssSelector("td:nth-of-type(5) > table > tbody > tr:nth-of-type(2) > td:nth-of-type(2) > em > button")).click(); //клик на Создать
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/form/div/div/div/div/div[2]/img")).click(); //клик на календарь
+
+        driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/form/div/div/div/div/div[2]/img")).click(); //клик на календарь от
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        app.setDateOperations();
 
-        for (int i = 0; i < 3 ; i++) {
-            driver.findElement(By.cssSelector("td.x-date-left")).click(); //click 3 times
-            Thread.sleep(2000);
-        }
-
-        WebElement kalendarOperations = driver.findElement(By.cssSelector("li > div > table > tbody > tr:nth-child(2) > td > table > tbody")); //валидный xpath для календаря раньше был ext 1862!!!
-        //List<WebElement> rows = kalendarOperations.findElements(By.tagName("tr")); //поиск строк
-        List <WebElement> columns = kalendarOperations.findElements(By.tagName("td")); //поиск столбцов
-        for (WebElement cell: columns){
-            //Выбираем 11 число
-            if (cell.getText().equals("11")){
-                cell.findElement(By.linkText("11")).click();
-                break;
-            }
-        }
         Actions act = new Actions(driver);
-        for (int i = 0; i < 3; i++) {
-            act.sendKeys(Keys.TAB).build().perform();
+        act.sendKeys(Keys.TAB).build().perform(); //tab перезодит в поле дата ДО
+        act.sendKeys("11092018"); //ввод дата ДО
+
+        //driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/form/div/div/div/div/div[4]/img")).click(); //клик на календарь до
+        //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+
+        //Actions act = new Actions(driver);
+        for (int i = 0; i < 2; i++) {
+            act.sendKeys(Keys.TAB).build().perform(); //иммитация нажатия TAB 3 раза
         }
 
-        act.sendKeys(Keys.RETURN).build().perform();
+        act.sendKeys(Keys.RETURN).build().perform();  //иммитация нажатия ENTER - кнопка Сформировать
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
 
         act.sendKeys(Keys.RETURN).build().perform();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         //driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/form/div/div/div/div/div[2]/input")).clear();
         //driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/form/div/div/div/div/div[2]/input")).click();
        // driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/form/div/div/div/div/div[2]/input")).sendKeys("11.09.2018");
@@ -88,19 +80,19 @@ public class Dok1CTests extends TestBase {
         app.waitForPageLoadComplete(driver);
     }
 
+
     @Then ("^Документы отобразились$")
     public void loadedDocs() {
-        WebDriverWait wait = new WebDriverWait(driver, 60);
-        wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//div[5]/table/tbody/tr/td[2]/div"))));
+        WebDriverWait wait = new WebDriverWait(driver, 90);
+        wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//div[5]/table/tbody/tr/td[2]/div")))); //ожидание 60с появления документов, 1с долго грузятся.
         driver.findElement(By.xpath("//div[5]/table/tbody/tr/td[2]/div")).click();
         app.waitForPageLoadComplete(driver);
     }
 
     @Then("^Выбрать Операционные переводы$")
-    public void selectOperacionPerevody() throws InterruptedException {
+    public void selectOperacionPerevody() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement element = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li:nth-of-type(2) > a:nth-of-type(2) > em > span > span")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li:nth-of-type(2) > a:nth-of-type(2) > em > span > span")));
         driver.findElement(By.cssSelector("li:nth-of-type(2) > a:nth-of-type(2) > em > span > span")).click(); //выбрать операционные переводы
     }
 
