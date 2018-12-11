@@ -156,38 +156,50 @@ public class KaznacheystvoTests extends TestBase {
         Thread.sleep(5000);
         //driver.findElement(By.xpath
         //        ("//div[4]/div/div/div[2]/div/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button")).click(); //Клик применить
-        WebDriverWait wait = new WebDriverWait(driver, 60);
+    }
+
+    @Then("Платежи отобразились")
+    public void платежи_отобразились() {
+        WebDriverWait wait = new WebDriverWait(driver, 40);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
                 ("#fndrv_pay_card1 > div > div > div > div > div > div > div > div:nth-child(2) > div > div:nth-child(4)")))); //ожидание загрузки списка платежей
         //wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//div[4]/div/div/div/div/div/div/div/div[2]/div/div/div[2]/div/div[2]/table/tbody/tr/td[3]/div")))); //ожидание 30c
         driver.findElement(By.cssSelector("#fndrv_pay_card1 > div > div > div > div > div > div > div > div:nth-child(2) > div > div:nth-child(4)")).click();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-    }
-
-    @Then("Платежи отобразились")
-    public void платежи_отобразились() {
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[4]/div/div/div/div/div/div[2]/div/div[2]/div/div/div[2]/div/div/table/tbody/tr/td[2]/div"))); //клик информация платежи
+        System.out.println(driver.findElement(By.xpath(("//div[4]/div/div/div/div/div/div[2]/div/div[2]/div/div/div[2]/div/div/table/tbody/tr/td[2]/div"))).getText());
     }
 
     @Then("Выбрать маржа")
-    public void выбрать_маржа() {
-
+    public void select_marja() {
+        driver.findElement(By.xpath("//li[5]/a[2]/em/span/span")).click(); //выбрать маржу
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        driver.findElement(By.xpath("//div/table/tbody/tr[2]/td[2]/em/button")).click(); //клик применить
     }
 
     @Then("Маржа отобразилась")
-    public void маржа_отобразилась() {
-
+    public void loaded_marja() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(("#fndr2_tab2_1 > div > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div > div:nth-child(5)")))); //клик информация маржа
+        System.out.println(driver.findElement(By.cssSelector(("#fndr2_tab2_1 > div > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div > div:nth-child(5)"))).getText()); //имя маржа
+        driver.findElement(By.cssSelector(("#fndr2_tab2_1 > div > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div > div:nth-child(5)"))).click(); //клик
+        Thread.sleep(2000);
     }
 
     @Then("Выбрать платежный календарь")
     public void выбрать_платежный_календарь() {
-
+        driver.findElement(By.xpath("//li[6]/a[2]/em/span/span")).click(); //выбрать платежный календарь
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        driver.findElement(By.id("fnd_calndar_panel-month-day-20181126")).click(); //клик на календарь
     }
 
     @Then("Выбрать справочник банков")
     public void выбрать_справочник_банков() {
-
+        driver.findElement(By.xpath("//li[7]/a[2]/em/span/span")).click(); //выбрать платежный календарь
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebElement bank = driver.findElement(By.cssSelector("#fndr_tab5 > div > div > div > div > div > div > div:nth-child(5)"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated((By) bank));
+        System.out.println(bank.getText()); //имя банка
+        bank.click(); //клик 5й банк в списке
     }
-
-
 }
