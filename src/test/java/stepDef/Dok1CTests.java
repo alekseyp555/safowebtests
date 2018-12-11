@@ -6,19 +6,12 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
-
-import static javafx.scene.input.KeyCode.N;
 
 @Description("Проверка модуля Документы для 1С-Бухгалтерии")
 @Test(retryAnalyzer = MyRetry.class)
@@ -55,8 +48,11 @@ public class Dok1CTests extends TestBase {
 
         Actions act = new Actions(driver);
         act.sendKeys(Keys.TAB).build().perform(); //tab перезодит в поле дата ДО
-        act.sendKeys("11092018"); //ввод дата ДО
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
 
+        act.sendKeys("11092018"); //ввод дата ДО
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        Thread.sleep(2000);
         //driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/form/div/div/div/div/div[4]/img")).click(); //клик на календарь до
         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
 

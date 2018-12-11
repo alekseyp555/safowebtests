@@ -107,3 +107,4 @@ target/RunCuke/cucumber.html/formatter.js
 *.txt
 *.log
 .idea/workspace.xml
+allure-report/index.html

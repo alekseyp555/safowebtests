@@ -12,8 +12,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import stepDef.MyTestListener;
 
-import java.io.IOException;
-
 @Listeners(MyTestListener.class)
 public class Hook {
 
@@ -26,7 +24,7 @@ public class Hook {
     }
 
     @Before
-	public void setUp(Scenario scenario) throws IOException {
+	public void setUp(Scenario scenario) {
         app.init(scenario);
     }
 

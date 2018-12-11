@@ -92,7 +92,7 @@ public class ApplicationManager {
                 .equals("complete"));
     }
 
-    public void login() throws Throwable{
+     public void login() throws Throwable{
         //чтение данных из файла
         String target = System.getProperty("target", "local");
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
