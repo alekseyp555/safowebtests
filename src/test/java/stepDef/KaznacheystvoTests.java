@@ -12,7 +12,7 @@ import ru.yandex.qatools.allure.annotations.Description;
 import java.text.ParseException;
 import java.util.concurrent.TimeUnit;
 
-@Description("Проверка модуля Документы для 1С-Бухгалтерии")
+@Description("Проверка модуля Казначейство")
 @Test(retryAnalyzer = MyRetry.class)
 public class KaznacheystvoTests extends TestBase {
     private WebDriver driver = app.getDriver();
@@ -94,7 +94,6 @@ public class KaznacheystvoTests extends TestBase {
         wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//div[2]/div/div/div/div/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr/td[2]/div")))); //ожидание 10c
         driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr/td[2]/div")).click();
     }
-
     /*
     @Then("Выбрать транши к погашению")
     public void выбрать_транши_к_погашению() throws InterruptedException {
