@@ -3,22 +3,14 @@ package stepDef;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.apache.commons.lang3.time.DateFormatUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
-
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 
 @Description("Проверка модуля Документы для 1С-Бухгалтерии")
 @Test(retryAnalyzer = MyRetry.class)
@@ -143,7 +135,7 @@ public class KaznacheystvoTests extends TestBase {
 
         WebElement dateTo = driver.findElement(By.xpath("//div[4]/div/div/div[2]/div/form/div[2]/div/div/div/div[3]/input"));
         dateTo.clear();
-        jse.executeScript("arguments[0].value='" + "10012018" + "';", dateTo); //передаем дату в поле ДО
+        jse.executeScript("arguments[0].value='" + "10.01.2018" + "';", dateTo); //передаем дату в поле ДО
         //act.sendKeys(Keys.TAB).build().perform(); //tab перезодит в поле дата ДО
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //ожидание загрузки страницы
         //driver.findElement(By.xpath("//div[4]/div/div/div[2]/div/form/div[2]/div/div/div/div[3]/input")).sendKeys("10012018"); //дата ДО
@@ -159,7 +151,7 @@ public class KaznacheystvoTests extends TestBase {
     }
 
     @Then("Платежи отобразились")
-    public void платежи_отобразились() {
+    public void loadPayment() {
         WebDriverWait wait = new WebDriverWait(driver, 40);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
                 ("#fndrv_pay_card1 > div > div > div > div > div > div > div > div:nth-child(2) > div > div:nth-child(4)")))); //ожидание загрузки списка платежей
@@ -171,14 +163,14 @@ public class KaznacheystvoTests extends TestBase {
     }
 
     @Then("Выбрать маржа")
-    public void select_marja() {
+    public void selectMarja() {
         driver.findElement(By.xpath("//li[5]/a[2]/em/span/span")).click(); //выбрать маржу
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         driver.findElement(By.xpath("//div/table/tbody/tr[2]/td[2]/em/button")).click(); //клик применить
     }
 
     @Then("Маржа отобразилась")
-    public void loaded_marja() throws InterruptedException {
+    public void loadMarja() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(("#fndr2_tab2_1 > div > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div > div:nth-child(5)")))); //клик информация маржа
         System.out.println(driver.findElement(By.cssSelector(("#fndr2_tab2_1 > div > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div > div:nth-child(5)"))).getText()); //имя маржа
@@ -187,18 +179,22 @@ public class KaznacheystvoTests extends TestBase {
     }
 
     @Then("Выбрать платежный календарь")
-    public void выбрать_платежный_календарь() {
+    public void selectPaymentCalendar() {
         driver.findElement(By.xpath("//li[6]/a[2]/em/span/span")).click(); //выбрать платежный календарь
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        driver.findElement(By.id("fnd_calndar_panel-month-day-20181126")).click(); //клик на календарь
+        driver.findElement(By.cssSelector("#fnd_calndar_panel-month-evt-55-1")).click(); //клик на платежный календарь
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(("div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > div:nth-of-type(5)")))); //клик платеж
+        driver.findElement(By.cssSelector(("div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > div:nth-of-type(5)"))).click(); //клик на платеж
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
     }
 
     @Then("Выбрать справочник банков")
-    public void выбрать_справочник_банков() {
+    public void selectSprBank() {
         driver.findElement(By.xpath("//li[7]/a[2]/em/span/span")).click(); //выбрать платежный календарь
         WebDriverWait wait = new WebDriverWait(driver, 30);
         WebElement bank = driver.findElement(By.cssSelector("#fndr_tab5 > div > div > div > div > div > div > div:nth-child(5)"));
-        wait.until(ExpectedConditions.visibilityOfElementLocated((By) bank));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#fndr_tab5 > div > div > div > div > div > div > div:nth-child(5)")));
         System.out.println(bank.getText()); //имя банка
         bank.click(); //клик 5й банк в списке
     }
