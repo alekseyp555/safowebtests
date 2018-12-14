@@ -31,7 +31,7 @@ public class MonitoringRisksTests extends TestBase {
 
     @Given("^Выбрать модуль Мониторинг Риски$")
     public void selectMonitoringRisks() throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1049")).click(); //Клик на казначейство
+        driver.findElement(By.id("ext-comp-1049")).click(); //Клик на Мониторинг Рисков
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
     }
