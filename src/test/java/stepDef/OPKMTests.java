@@ -71,8 +71,10 @@ public class OPKMTests  extends TestBase{
                 By.cssSelector("tbody:nth-child(2) > tr.x-tree-node-el.x-tree-node-collapsed > td:nth-child(1) > a > span > font")));
         driver.findElement(By.cssSelector("tbody:nth-child(2) > tr.x-tree-node-el.x-tree-node-collapsed > td:nth-child(1) > a > span > font")).click(); //клик 1элемент в списке
 
-        WebElement contragentInfo = driver.findElements(By.cssSelector
-                ("div.x-panel.x-border-panel > div > div > div > div:nth-child(2) > div > div > div.x-panel-bwrap > form > div > div > div > div > input")).get(0);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("div.x-panel.x-border-panel > div > div > div > div:nth-child(2) > div > div > div.x-panel-bwrap > form > div > div > div > div > input")));
+        WebElement contragentInfo = driver.findElements(
+                By.cssSelector("div.x-panel.x-border-panel > div > div > div > div:nth-child(2) > div > div > div.x-panel-bwrap > form > div > div > div > div > input")).get(0);
         contragentInfo.getText();
         contragentInfo.click();
     }
@@ -91,12 +93,15 @@ public class OPKMTests  extends TestBase{
 
     @Then ("^Выбрать настройки ОПКМ$")
     public void selectSettingsOPKM () {
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        driver.findElement(By.cssSelector("li:nth-of-type(4) > a:nth-of-type(2) > em > span > span")).click(); //Клик Настройки ОПКМ
+        driver.findElement(By.cssSelector("div> div.x-grid3-row.x-grid3-row-first > table > tbody > tr > td > div.x-grid3-col-1")).isDisplayed(); //отобразились настройки
 
     }
     @Then ("^Выбрать Автоверификация$")
     public void selectAutoVerify () {
         driver.findElement(By.cssSelector("span.x-tab-strip-text.document-check-icon")).click(); //клик автоверификация
+        driver.findElement(By.cssSelector("[name='CMB_LIST_BUYERSs']")).isDisplayed(); //проверка полей
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-
     }
 }
