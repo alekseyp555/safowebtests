@@ -136,7 +136,7 @@
           <entry key="gradle" value="35" />
           <entry key="gradlew" value="5" />
           <entry key="html" value="1" />
-          <entry key="java" value="827" />
+          <entry key="java" value="830" />
           <entry key="log" value="10" />
           <entry key="md" value="2" />
           <entry key="properties" value="25" />
@@ -151,7 +151,7 @@
           <entry key="Cucumber" value="156" />
           <entry key="Groovy" value="35" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="827" />
+          <entry key="JAVA" value="830" />
           <entry key="PLAIN_TEXT" value="24" />
           <entry key="Properties" value="25" />
           <entry key="Substeps" value="139" />
@@ -164,7 +164,7 @@
           <entry key="dummy" value="74" />
           <entry key="feature" value="6416" />
           <entry key="gradle" value="484" />
-          <entry key="java" value="27610" />
+          <entry key="java" value="27718" />
           <entry key="properties" value="116" />
           <entry key="substeps" value="27" />
           <entry key="xml" value="90" />
@@ -174,7 +174,7 @@
         <counts>
           <entry key="Cucumber" value="3493" />
           <entry key="Groovy" value="484" />
-          <entry key="JAVA" value="27609" />
+          <entry key="JAVA" value="27717" />
           <entry key="PLAIN_TEXT" value="74" />
           <entry key="Properties" value="116" />
           <entry key="RegExp" value="1" />
@@ -191,11 +191,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/PlatejTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+            <state relative-caret-position="404">
+              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Timeout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -737,7 +746,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545135937292" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545140809505" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -1030,27 +1039,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunTest - 2018.12.18 at 13h 49m 26s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2018.12.18 at 14h 21m 23s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2018.12.18 at 14h 24m 31s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2018.12.18 at 14h 28m 03s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2018.12.18 at 14h 31m 35s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2018.12.18 at 14h 37m 41s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2018.12.18 at 14h 58m 34s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="RunTest - 2018.12.18 at 15h 06m 32s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
@@ -1058,6 +1046,27 @@
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="RunTest - 2018.12.18 at 15h 19m 05s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2018.12.18 at 15h 26m 33s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2018.12.18 at 15h 46m 56s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2018.12.18 at 15h 57m 13s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2018.12.18 at 16h 01m 53s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2018.12.18 at 16h 18m 38s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2018.12.18 at 16h 22m 50s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2018.12.18 at 16h 29m 38s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -1083,8 +1092,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49733475" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.57569295" visible="true" weight="0.39804772" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49573562" weight="0.3991323" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.57569295" weight="0.39804772" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49573562" visible="true" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286334" />
@@ -1194,6 +1203,12 @@
           <line>102</line>
           <properties />
           <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepDef/PlatejTests.java</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1528,13 +1543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Timeout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-java/4.2.0/832385363c0a6067228a64f989d34cf99add3a9f/cucumber-java-4.2.0-sources.jar!/cucumber/runtime/java/JavaStepDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -1573,13 +1581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
@@ -1633,10 +1634,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Timeout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#803#1913#0" expanded="true" />
+            <element signature="e#1912#1913#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/PlatejTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+        <state relative-caret-position="404">
+          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

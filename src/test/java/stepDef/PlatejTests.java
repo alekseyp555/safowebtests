@@ -97,19 +97,61 @@ public class PlatejTests extends TestBase {
         //driver.findElement(By.cssSelector(".x-grid-group-body > div:nth-of-type(1) > table > tbody > tr > td > div > div")).click();
         //driver.findElement(By.cssSelector("div.x-grid-group-body > div:nth-child(3) > table > tbody > tr > td.x-grid3-col.x-grid3-cell.x-grid3-td-0 > div > div")).click();
         Thread.sleep(3000);
-
-                
     }
 
     @Then ("^Выбрать Документы$")
-    public void selectDocs() {
+    public void selectDocs() throws InterruptedException {
+        driver.findElement(By.cssSelector("span.x-tab-strip-text.document-icon")).click(); //клик документы
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        driver.findElement(By.xpath
+                ("//div[3]/div/div/div/div/div/div[2]/div/div/div/div/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button")).click();
+        WebElement dateFrom = driver.findElement(By.xpath("//div[3]/div/div/div[2]/div/div/div/div/form/div[2]/div/div/div/div[2]/input")); //поиск даты ОТ
+        dateFrom.clear();
+        dateFrom.sendKeys("01122018");
 
+        act.sendKeys(Keys.TAB).build().perform(); //tab переход в поле дата ДО
+        Thread.sleep(2000);
+
+        WebElement dateTo = driver.findElement(By.xpath("//div[3]/div/div/div[2]/div/div/div/div/form/div[2]/div/div/div/div[3]/input")); //поиск даты ОТ
+        dateTo.sendKeys("10122018");
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath
+                ("//div[3]/div/div/div[2]/div/div/div/div/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button")).click(); //клик применить
+        Thread.sleep(2000);
+
+        List<WebElement> elements = driver.findElements(By.cssSelector(".x-grid-group-body > div:nth-of-type(1) > table > tbody > tr > td > div > div"));
+        if (elements.get(1).isDisplayed()) {
+            elements.get(1).click(); //выбрать второй элемент из списка
+        }
+        Thread.sleep(3000);
     }
 
     @Then ("^Выбрать Регрессные требования$")
-    public void selectRegresn() {
+    public void selectRegresn() throws InterruptedException {
+        driver.findElement(By.cssSelector("div > div > div > div > div > ul > li:nth-child(4)")).click();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        driver.findElement(By.xpath
+                ("//div[4]/div/div/div/div/div/div[2]/div/div/div/div/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button")).click();
+        WebElement dateFrom = driver.findElement(By.xpath("//div[4]/div/div/div[2]/div/div/div/div/form/div[2]/div/div/div/div[2]/input")); //поиск даты ОТ
+        dateFrom.clear();
+        dateFrom.sendKeys("01122018");
 
+        act.sendKeys(Keys.TAB).build().perform(); //tab переход в поле дата ДО
+        Thread.sleep(2000);
 
+        WebElement dateTo = driver.findElement(By.xpath("//div[4]/div/div/div[2]/div/div/div/div/form/div[2]/div/div/div/div[3]/input")); //поиск даты ОТ
+        dateTo.sendKeys("10122018");
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath
+                ("//div[4]/div/div/div[2]/div/div/div/div/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button")).click(); //клик применить
+        Thread.sleep(2000);
+
+        List<WebElement> elements = driver.findElements(By.cssSelector(".x-grid-group-body > div:nth-of-type(1) > table > tbody > tr > td > div > div"));
+        if (elements.get(1).isDisplayed()) {
+            elements.get(1).click(); //выбрать второй элемент из списка
+        }
+        Thread.sleep(3000);
     }
-
 }
