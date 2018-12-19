@@ -14,7 +14,7 @@ import ru.yandex.qatools.allure.annotations.Description;
 
 import java.util.concurrent.TimeUnit;
 
-@Description("Проверка модуля Платежи")
+@Description("Проверка модуля Поставки")
 @Test(retryAnalyzer = MyRetry.class)
 public class PostavkiTests extends TestBase {
     private WebDriver driver = app.getDriver();
