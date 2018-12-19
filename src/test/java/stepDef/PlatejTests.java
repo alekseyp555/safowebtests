@@ -35,7 +35,7 @@ public class PlatejTests extends TestBase {
 
     @Given("^Выбрать модуль Платежи$")
     public void selectPlateji () throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1051")).click(); //Клик на ОПКМ
+        driver.findElement(By.id("ext-comp-1051")).click(); //Выбрать платежи
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
     }
