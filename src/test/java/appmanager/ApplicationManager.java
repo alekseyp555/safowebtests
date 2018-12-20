@@ -155,6 +155,10 @@ public class ApplicationManager {
         }
     }
 
+    public void gotoCrmSettings () {
+        driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click();//возврат в настройки
+    }
+
     public void selectOperaciy() {
        driver.findElement(By.cssSelector("#ext-comp-1043")).click(); //выбрать операции в пуске
     }
@@ -167,11 +171,13 @@ public class ApplicationManager {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
         //driver.findElement(By.xpath("//div[3]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div/div[6]/table/tbody/tr/td[5]/div")).click(); //выбрать 5й элемент в списке
-        driver.findElement(By.cssSelector("#srm_bpm-cloneRequestList > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(5)")); //заявки доступные к изменениям
+
+        //driver.findElement(By.cssSelector("#srm_bpm-cloneRequestList > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(5)")); //заявки доступные к изменениям
+
         //driver.findElement(By.xpath("//div[5]/table/tbody/tr/td[2]/div")).click(); //клик на 5 элемент
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
-        driver.findElement(By.xpath("//div[3]/div/div/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div/table/tbody/tr/td/div")).click(); //выбрать первую строку
+        //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        //Thread.sleep(5000);
+        //driver.findElement(By.xpath("//div[3]/div/div/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div/table/tbody/tr/td/div")).click(); //выбрать первую строку
     }
 
     public void zayavki_active() throws InterruptedException {
@@ -179,11 +185,11 @@ public class ApplicationManager {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
         //driver.findElement(By.xpath("//div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div/table/tbody/tr/td/div")).click();
-        driver.findElement(By.cssSelector("#srm_bpm-activeRequestList > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(5)")); //выбор 5 элемента
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
-        driver.findElement(By.xpath("//div[4]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div/div[6]/table/tbody/tr/td[2]/div")).click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        //driver.findElement(By.cssSelector("#srm_bpm-activeRequestList > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(5)")); //выбор 5 элемента
+        //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        //Thread.sleep(5000);
+        //driver.findElement(By.xpath("//div[4]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div/div[6]/table/tbody/tr/td[2]/div")).click();
+        //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
     }
 
     public void zayavki_all() throws InterruptedException {
