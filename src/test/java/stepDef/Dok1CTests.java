@@ -9,8 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
-
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Description("Проверка модуля Документы для 1С-Бухгалтерии")
