@@ -3,20 +3,22 @@ package stepDef;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
+
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Description("Проверка модуля Документы для 1С-Бухгалтерии")
 @Test(retryAnalyzer = MyRetry.class)
 public class Dok1CTests extends TestBase {
     private WebDriver driver = app.getDriver();
+    Actions act = new Actions(driver);
+    JavascriptExecutor jse = (JavascriptExecutor) driver;
 
     public Dok1CTests () throws Throwable {
         super();
@@ -36,8 +38,27 @@ public class Dok1CTests extends TestBase {
         Thread.sleep(5000);
     }
 
-    @When("^Создать выписку с 19 сентября$")
+    @When("^Создать выписку с 10 декабря по 20 декабря$")
     public void requestDocs () throws InterruptedException {
+
+    driver.findElement(By.cssSelector("td:nth-of-type(4) > table > tbody > tr:nth-of-type(2) > td:nth-of-type(2) > em > button.x-btn-text.ico_m_filtr")).click(); //клик на кнопку фильтр
+        Thread.sleep(2000);
+
+        WebElement dateFrom = driver.findElement(By.name("ch1_dt1"));
+        dateFrom.click();
+        dateFrom.clear();
+        dateFrom.sendKeys("10.12.2018");
+
+        act.sendKeys(Keys.TAB).build().perform(); //tab переход в поле дата ДО
+        Thread.sleep(2000);
+
+        WebElement dateTo = driver.findElement(By.name("ch1_dt2"));
+        dateTo.sendKeys("20.12.2018");
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//div[2]/div/div/div/div/div[2]/div/div/div/div/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button")).click();
+        Thread.sleep(2000);
+        /*
 
         driver.findElement(By.cssSelector("td:nth-of-type(5) > table > tbody > tr:nth-of-type(2) > td:nth-of-type(2) > em > button")).click(); //клик на Создать
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
@@ -74,6 +95,7 @@ public class Dok1CTests extends TestBase {
         //driver.findElement(By.xpath("//div[2]/div/div/div/div/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button")).click();
         //driver.findElement(By.xpath("//div[2]/div/div/div/div/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]")).click(); //клик да
         app.waitForPageLoadComplete(driver);
+        */
     }
 
 
