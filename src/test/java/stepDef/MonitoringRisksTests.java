@@ -38,7 +38,7 @@ public class MonitoringRisksTests extends TestBase {
 
     @When("^Выбрать в работе$")
     public void selectActiveTaskInWork() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated((By.cssSelector("div:nth-of-type(5) > table > tbody > tr > td:nth-of-type(2) > div")))); //ожидание 10c
+        //wait.until(ExpectedConditions.visibilityOfElementLocated((By.cssSelector("div:nth-of-type(5) > table > tbody > tr > td:nth-of-type(2) > div")))); //ожидание 10c
         driver.findElement(By.cssSelector("span.x-tab-strip-text.action-RiskWork")).click(); //клик в работе
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
        // driver.findElement(By.xpath("//div[2]/div/div/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[6]/table/tbody/tr/td[2]/div")).click(); //клик 5 элемент в списке
@@ -63,12 +63,11 @@ public class MonitoringRisksTests extends TestBase {
         wait.until(ExpectedConditions.visibilityOfElementLocated((By.cssSelector("tbody:nth-of-type(6) > tr > td > img")))); //ожидание 30с
         driver.findElement(By.cssSelector("tbody:nth-of-type(6) > tr > td > img")).click(); //развернуть реестр
         Thread.sleep(2000);
-        driver.findElement(By.cssSelector("font")).click();
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("textarea"))); //ждем загрузки комментария и выводим его
-        System.out.println(driver.findElement(By.cssSelector("textarea")).getText()); //выведем имя комментария
-        driver.findElement(By.cssSelector("textarea")).click(); //клик в поле комментарий
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        //driver.findElement(By.cssSelector("font")).click();
+        driver.findElement(By.cssSelector
+                ("#bpmrisk_contractor_grid > div > div > div > div.x-treegrid-root-node > table > tbody:nth-child(7) > tr.x-tree-node-ct > td > table > tbody")).click(); //клик на реестр
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='NAME_CA_SID']"))); //ждем загрузки комментария и выводим его
+        System.out.println(driver.findElement(By.cssSelector("[name='NAME_CA_SID']")).getText()); //выведем имя комментария
     }
 
     @Then ("^Выбрать мониторинг ПА$")

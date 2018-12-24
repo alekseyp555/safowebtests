@@ -4,6 +4,7 @@ Feature: Тест для тестирования модуля "Монитори
 
   @accept
   @operations
+  @deb
 
 
 #Background:
