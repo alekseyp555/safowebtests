@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 @Test(retryAnalyzer = MyRetry.class)
 public class OPKMTests  extends TestBase{
     private WebDriver driver = app.getDriver();
-    WebDriverWait wait = new WebDriverWait(driver, 30);
+    WebDriverWait wait = new WebDriverWait(driver, 60);
     Actions act = new Actions(driver);
 
     public OPKMTests () throws Throwable {
@@ -64,13 +64,13 @@ public class OPKMTests  extends TestBase{
     }
 
     @Then ("^Выбрать контрагенты$")
-    public void selectContragent() {
+    public void selectContragent() throws InterruptedException {
         driver.findElement(By.cssSelector("span.x-tab-strip-text.contractor-man-icon")).click(); //выбрать контрагенты
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.cssSelector("tbody:nth-child(2) > tr.x-tree-node-el.x-tree-node-collapsed > td:nth-child(1) > a > span > font")));
         driver.findElement(By.cssSelector("tbody:nth-child(2) > tr.x-tree-node-el.x-tree-node-collapsed > td:nth-child(1) > a > span > font")).click(); //клик 1элемент в списке
-
+        Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.cssSelector("div.x-panel.x-border-panel > div > div > div > div:nth-child(2) > div > div > div.x-panel-bwrap > form > div > div > div > div > input")));
         WebElement contragentInfo = driver.findElements(

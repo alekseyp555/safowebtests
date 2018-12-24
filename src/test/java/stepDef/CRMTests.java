@@ -74,12 +74,13 @@ public class CRMTests extends TestBase {
     }
 
     @Then("^Выбрать настройки клиентский менеджер$")
-    public void selectClientManager () {
+    public void selectClientManager () throws InterruptedException {
         app.gotoCrmSettings();
         driver.findElement(By.cssSelector("#settings_client_manager")).click(); //клик на клиенсткий менеджер
+        Thread.sleep(3000);
         if (app.isElementVisible("#settings_client_manager > div > div > div > div > div > div > div > div > div > div:nth-child(5)"))
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         driver.findElement(By.cssSelector("#settings_client_manager > div > div > div > div > div > div > div > div > div > div:nth-child(5)")).click(); //выбрать 5й элемент в списке
+        Thread.sleep(2000);
     }
 
    /* @When("^Выбрать ввод заявок, ручной ввод$")
@@ -146,12 +147,11 @@ public class CRMTests extends TestBase {
         Thread.sleep(5000);
     }
     */
-
     @Then("^Выбрать отчеты$")
     public void selectReports() throws InterruptedException {
         driver.findElement(By.cssSelector("span.x-tab-strip-text.applications-icon-16")).click(); //клик на главную
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         driver.findElement(By.cssSelector("#reportPage")).click(); //клик отчеты
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
     }

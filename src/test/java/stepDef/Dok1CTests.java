@@ -38,7 +38,6 @@ public class Dok1CTests extends TestBase {
 
     @When("^Создать выписку с 10 декабря по 20 декабря$")
     public void requestDocs () throws InterruptedException {
-
     driver.findElement(By.cssSelector("td:nth-of-type(4) > table > tbody > tr:nth-of-type(2) > td:nth-of-type(2) > em > button.x-btn-text.ico_m_filtr")).click(); //клик на кнопку фильтр
         Thread.sleep(2000);
 

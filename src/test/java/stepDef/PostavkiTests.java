@@ -48,7 +48,7 @@ public class PostavkiTests extends TestBase {
 
     @Then ("^Выбрать поставки за текущую неделю$")
     public void selectCurrWeek () {
-        driver.findElement(By.cssSelector("#qfltr2")).click(); //клик на поставку за текущую неделю
+        driver.findElement(By.cssSelector("#qfltr3")).click(); //клик на поставку за текущую неделю
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
     }
 
