@@ -3,15 +3,16 @@ package stepDef;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 
 import java.util.concurrent.TimeUnit;
 
 @Description("Проверка модуля Пользовательские справочники")
+@Feature(value = "Справочники")
 @Test
 public class PolzovatelskieSpravochnikiTests extends TestBase {
     //private ChromeDriver driver;

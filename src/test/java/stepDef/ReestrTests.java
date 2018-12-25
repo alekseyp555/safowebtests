@@ -3,6 +3,7 @@ package stepDef;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.qameta.allure.Epic;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Description("Проверка модуля Реестры")
+@Epic(value = "Операции")
 @Test(retryAnalyzer = MyRetry.class)
 public class ReestrTests extends TestBase {
     private WebDriver driver = app.getDriver();

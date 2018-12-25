@@ -33,7 +33,7 @@ dependencies {
     compile 'org.testng:testng:6.14.3'
     compile 'io.cucumber:cucumber-java:4.2.0'
     compile 'io.cucumber:cucumber-testng:4.2.0'
-    compile 'io.qameta.allure:allure-cucumber3-jvm:2.7.0'
+    implementation 'io.qameta.allure:allure-cucumber3-jvm:2.8.1'
     agent 'org.aspectj:aspectjweaver:1.9.2'
     compile 'ru.yandex.qatools.allure:allure-testng-adaptor:1.5.4'
     compile 'ch.qos.logback:logback-classic:1.2.3'

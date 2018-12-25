@@ -3,6 +3,7 @@ package stepDef;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.qameta.allure.Epic;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -12,6 +13,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 @Description("Проверка модуля Начисления и тарифные документы")
+@Epic(value = "Справочники")
 @Test
 
 public class NachisleniyaTarifnieDokTests extends TestBase{
@@ -72,7 +74,6 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
 
     @Then("Выбрать счет")
     public void выбрать_счет() throws Throwable {
-        //driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")).click(); //выбираем второй элемент в списке документов счетов
         driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-of-type(5)")).click(); //выбираем второй элемент в списке документов счетов
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);

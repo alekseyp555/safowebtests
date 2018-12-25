@@ -3,15 +3,18 @@ package stepDef;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
+
 import java.util.concurrent.TimeUnit;
 
 @Description("Проверка модуля Документы для 1С-Бухгалтерии")
+@Feature("Операции")
 @Test(retryAnalyzer = MyRetry.class)
 public class Dok1CTests extends TestBase {
     private WebDriver driver = app.getDriver();

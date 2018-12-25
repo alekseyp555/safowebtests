@@ -3,6 +3,8 @@ package stepDef;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -12,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertEquals;
 
 @Description("Проверка модуля клиентский менеджер")
+@Feature("Справочники")
 @Test
 public class FaktorChems extends TestBase {
     //private ChromeDriver driver;
