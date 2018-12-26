@@ -4,7 +4,6 @@ Feature: Тест для тестирования модуля "BPM"
 
   @accept
   @operations
-@deb
 
 #Background:
 #Пользователь должен быть залогинен в системе

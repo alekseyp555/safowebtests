@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
-
 import java.util.concurrent.TimeUnit;
 
 @Description("Проверка модуля ОПКМ")
@@ -25,20 +24,17 @@ public class OPKMTests  extends TestBase{
 
     public OPKMTests () throws Throwable {
         super();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.login();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
-        app.waitForPageLoadComplete(driver);
         app.selectPusk(); //клик пуск
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.selectOperaciy(); //выбрать операции
     }
 
     @Given ("^Выбрать модуль ОПКМ$")
-    public void selectOPKM () throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1050")).click(); //Клик на ОПКМ
+    public void selectOPKM ()  {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
+        driver.findElement(By.id("ext-comp-1050")).click(); //Клик на ОПКМ
     }
 
     @When ("^Выбрать событие$")
@@ -58,17 +54,15 @@ public class OPKMTests  extends TestBase{
         //wait.until(ExpectedConditions.visibilityOfElementLocated((By.cssSelector
         //("div> table > tbody > tr > td.x-grid3-col.x-grid3-cell.x-grid3-td-0.x-grid3-cell-first.x-grid3-check-col-td.x-grid3-dirty-cell > div > div")))); //ждем загрузку информации
         //driver.findElement(By.cssSelector("div> table > tbody > tr > td.x-grid3-col.x-grid3-cell.x-grid3-td-0.x-grid3-cell-first.x-grid3-check-col-td.x-grid3-dirty-cell > div > div")).click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS); //ожидание загрузки страницы
            //driver.findElement(By.cssSelector("div.x-window-bbar > div > table > tbody > tr > td.x-toolbar-right > table.x-toolbar-right-ct")).click(); //закрыть информацию о событиеи
         driver.findElement(By.xpath
                     ("//div[33]/div[2]/div/div/div/div[2]/div/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button")).click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
     }
 
     @Then ("^Выбрать контрагенты$")
     public void selectContragent() throws InterruptedException {
         driver.findElement(By.cssSelector("span.x-tab-strip-text.contractor-man-icon")).click(); //выбрать контрагенты
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.cssSelector("tbody:nth-child(2) > tr.x-tree-node-el.x-tree-node-collapsed > td:nth-child(1) > a > span > font")));
         driver.findElement(By.cssSelector("tbody:nth-child(2) > tr.x-tree-node-el.x-tree-node-collapsed > td:nth-child(1) > a > span > font")).click(); //клик 1элемент в списке
@@ -78,32 +72,31 @@ public class OPKMTests  extends TestBase{
         WebElement contragentInfo = driver.findElements(
                 By.cssSelector("div.x-panel.x-border-panel > div > div > div > div:nth-child(2) > div > div > div.x-panel-bwrap > form > div > div > div > div > input")).get(0);
         contragentInfo.getText();
+        Thread.sleep(2000);
         contragentInfo.click();
     }
 
     @Then ("^Выбрать отчеты ОПКМ$")
     public void selectReportOKM () throws InterruptedException {
-        driver.findElement(By.cssSelector("span.x-tab-strip-text.reports-icon")).click(); //клик отчеты
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        driver.findElement(By.cssSelector("span.x-tab-strip-text.reports-icon")).click(); //клик отчеты
         act.doubleClick(driver.findElement(By.cssSelector
                 ("#opkm3_report > div > div > div > div > div > div > div > div > div > div:nth-child(5)"))).build().perform(); //дабл клик на событии
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         driver.findElement(By.cssSelector("div.x-panel-bwrap > div.x-panel-bbar.x-panel-bbar-noborder > " +
                 "div.x-toolbar.x-small-editor.x-statusbar.x-toolbar-layout-ct > table > tbody > tr > td.x-toolbar-right > table > tbody > tr > td > table > tbody > tr > td:nth-child(2)")).click();  //клик открыть
         Thread.sleep(3000);
     }
 
     @Then ("^Выбрать настройки ОПКМ$")
-    public void selectSettingsOPKM () {
+    public void selectSettingsOPKM () throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         driver.findElement(By.cssSelector("li:nth-of-type(4) > a:nth-of-type(2) > em > span > span")).click(); //Клик Настройки ОПКМ
         driver.findElement(By.cssSelector("div> div.x-grid3-row.x-grid3-row-first > table > tbody > tr > td > div.x-grid3-col-1")).isDisplayed(); //отобразились настройки
-
+        Thread.sleep(2000);
     }
     @Then ("^Выбрать Автоверификация$")
     public void selectAutoVerify () {
         driver.findElement(By.cssSelector("span.x-tab-strip-text.document-check-icon")).click(); //клик автоверификация
-        driver.findElement(By.cssSelector("[name='CMB_LIST_BUYERSs']")).isDisplayed(); //проверка полей
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        driver.findElement(By.cssSelector("[name='CMB_LIST_BUYERSs']")).isDisplayed(); //проверка полей)
     }
 }

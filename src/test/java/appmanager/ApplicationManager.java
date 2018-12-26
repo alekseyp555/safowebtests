@@ -79,6 +79,15 @@ public class ApplicationManager {
             logger.info("Scenario " + scenario.getName() + " status " + scenario.getStatus());
             //} else logger.info("Scenario " +  scenario.getName() + " status " + scenario.getStatus());
             //System.err.println(scenario.getName() + " status - " + scenario.getStatus());
+            try {
+                byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                String testName = scenario.getName();
+                scenario.embed(screenshot, "image/png");
+                scenario.write(testName);
+            } catch (WebDriverException wde) {
+                System.err.println(wde.getMessage());
+            } catch (ClassCastException cce) {
+                cce.printStackTrace();}
         }
         System.out.println("------------------------------------------------------------------");
         System.out.println("Stop - " + scenario.getName() + " status - " +scenario.getStatus());
@@ -101,8 +110,7 @@ public class ApplicationManager {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("user")))); //ожидание 10c
         type("user", properties.getProperty("web.login"));
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("pass")))); //ожидание 10c
+        //wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("pass")))); //ожидание 10c
         type("pass", properties.getProperty("web.password"));
         driver.findElement(By.xpath("//button")).click();
     }
