@@ -107,6 +107,7 @@ public class ApplicationManager {
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
         driver.get(properties.getProperty("web.baseUrl"));
         //driver.get("http://bugs-kz/login.html");
+        Thread.sleep(2000);
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("user")))); //ожидание 10c
         type("user", properties.getProperty("web.login"));

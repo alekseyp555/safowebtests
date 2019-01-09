@@ -61,7 +61,7 @@ public class KaznacheystvoTests extends TestBase {
         //driver.findElement(By.name("ch1_dt1")).clear();
         //driver.findElement(By.name("ch1_dt1")).sendKeys("11092018");
         driver.findElement(By.xpath("//div[2]/img")).click(); //клик календарь
-        app.setDateOperations();
+        app.setDateOperations(); //дата ОТ
         Thread.sleep(2000);
 
         //driver.findElement(By.xpath("//div[3]/img")).click();
@@ -72,7 +72,7 @@ public class KaznacheystvoTests extends TestBase {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(2000);
 
-        jse.executeScript("document.getElementsByName('ch2_dt1')[0].value='11092018'"); //передаем дату в поле
+        jse.executeScript("document.getElementsByName('ch2_dt1')[0].value='12.10.2018'"); //передаем дату в поле
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(2000);
@@ -128,7 +128,9 @@ public class KaznacheystvoTests extends TestBase {
         dateFrom.get(0).click(); //выбрать первый элемент из списка
         //WebElement dateFrom = driver.findElement(By.cssSelector("[name=ch1_dt1]"));
         dateFrom.get(0).clear();
-        dateFrom.get(0).sendKeys("10122018");
+
+        jse.executeScript("arguments[0].value='" + "10.12.2018" + "';", dateFrom.get(0)); //передаем дату в поле ОТ
+        //dateFrom.get(0).sendKeys("10122018");
         Thread.sleep(2000);
 
         act.sendKeys(Keys.TAB).build().perform(); //tab переход в поле дата ДО

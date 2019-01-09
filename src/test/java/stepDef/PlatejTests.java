@@ -65,8 +65,8 @@ public class PlatejTests extends TestBase {
         //WebElement dateFrom = driver.findElement(By.cssSelector("[name='pd1']")); //поиск даты ОТ
         WebElement dateFrom = driver.findElement(By.xpath("//div[2]/div/div/div[2]/div/div/div/div/form/div[2]/div/div/div/div[2]/input")); //поиск даты ОТ
         dateFrom.clear();
-        dateFrom.sendKeys("01122018");
-       // jse.executeScript("arguments[0].value='" + "01122018" + "';", dateFrom); //передаем дату в поле ОТ
+        //dateFrom.sendKeys("01122018");
+        jse.executeScript("arguments[0].value='" + "01122018" + "';", dateFrom); //передаем дату в поле ОТ
 
         act.sendKeys(Keys.TAB).build().perform(); //tab переход в поле дата ДО
         Thread.sleep(2000);
@@ -109,8 +109,10 @@ public class PlatejTests extends TestBase {
         driver.findElement(By.xpath
                 ("//div[3]/div/div/div/div/div/div[2]/div/div/div/div/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button")).click();
         WebElement dateFrom = driver.findElement(By.xpath("//div[3]/div/div/div[2]/div/div/div/div/form/div[2]/div/div/div/div[2]/input")); //поиск даты ОТ
+        dateFrom.click();
         dateFrom.clear();
-        dateFrom.sendKeys("01122018");
+        jse.executeScript("arguments[0].value='" + "01.12.2018" + "';", dateFrom); //передаем дату в поле ОТ
+        //dateFrom.sendKeys("01122018");
 
         act.sendKeys(Keys.TAB).build().perform(); //tab переход в поле дата ДО
         Thread.sleep(2000);
@@ -138,7 +140,8 @@ public class PlatejTests extends TestBase {
                 ("//div[4]/div/div/div/div/div/div[2]/div/div/div/div/div/div/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button")).click();
         WebElement dateFrom = driver.findElement(By.xpath("//div[4]/div/div/div[2]/div/div/div/div/form/div[2]/div/div/div/div[2]/input")); //поиск даты ОТ
         dateFrom.clear();
-        dateFrom.sendKeys("01122018");
+        jse.executeScript("arguments[0].value='" + "01.12.2018" + "';", dateFrom); //передаем дату в поле ОТ
+        //dateFrom.sendKeys("01122018");
 
         act.sendKeys(Keys.TAB).build().perform(); //tab переход в поле дата ДО
         Thread.sleep(2000);

@@ -8,11 +8,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Description;
+
 import java.util.concurrent.TimeUnit;
+
 import static org.testng.Assert.assertEquals;
 
-@Description("Login scenario for SAFO Web")
 @Test(retryAnalyzer = MyRetry.class)
 
 public class LoginValidTests extends TestBase {

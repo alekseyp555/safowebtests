@@ -44,10 +44,11 @@ public class Dok1CTests extends TestBase {
     driver.findElement(By.cssSelector("td:nth-of-type(4) > table > tbody > tr:nth-of-type(2) > td:nth-of-type(2) > em > button.x-btn-text.ico_m_filtr")).click(); //клик на кнопку фильтр
         Thread.sleep(2000);
 
-        WebElement dateFrom = driver.findElement(By.name("ch1_dt1"));
+        WebElement dateFrom = driver.findElement(By.name("ch1_dt1")); //дата ОТ
         dateFrom.click();
         dateFrom.clear();
-        dateFrom.sendKeys("10.12.2018");
+        jse.executeScript("arguments[0].value='" + "10.12.2018" + "';", dateFrom); //передаем дату в поле ОТ
+        //dateFrom.sendKeys("10122018");
 
         act.sendKeys(Keys.TAB).build().perform(); //tab переход в поле дата ДО
         Thread.sleep(2000);

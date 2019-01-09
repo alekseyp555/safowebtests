@@ -49,16 +49,18 @@ public class PostavkiTests extends TestBase {
     }
 
     @Then ("^Выбрать поставки за текущую неделю$")
-    public void selectCurrWeek () {
-        driver.findElement(By.cssSelector("#qfltr3")).click(); //клик на поставку за текущую неделю
+    public void selectCurrWeek () throws InterruptedException {
+        driver.findElement(By.cssSelector("#qfltr3")).click(); //клик на поставку за текущий месяц
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        Thread.sleep(3000);
     }
 
     @Then ("^Выбрать поставку$")
     public void selectCurrPostavki () {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div > div:nth-child(4) > table > tbody > tr > td.x-grid3-col.x-grid3-cell.x-grid3-td-0.x-grid3-cell-first > div")));
+        /*wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div > div:nth-child(4) > table > tbody > tr > td.x-grid3-col.x-grid3-cell.x-grid3-td-0.x-grid3-cell-first > div")));
         if (app.isElementVisible("div > div:nth-child(4) > table > tbody > tr > td.x-grid3-col.x-grid3-cell.x-grid3-td-0.x-grid3-cell-first > div"))
             driver.findElement(By.cssSelector("div > div:nth-child(4) > table > tbody > tr > td.x-grid3-col.x-grid3-cell.x-grid3-td-0.x-grid3-cell-first > div")).click();
         System.out.println(driver.findElement(By.cssSelector("div > div:nth-child(4) > table > tbody > tr > td.x-grid3-col.x-grid3-cell.x-grid3-td-0.x-grid3-cell-first > div")).getText());
+        */
     }
 }
