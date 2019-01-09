@@ -4,8 +4,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.qameta.allure.Epic;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 import java.time.LocalDate;
@@ -20,6 +20,8 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
 
     //private ChromeDriver driver;
     private WebDriver driver = app.getDriver();
+    Actions act = new Actions(driver);
+    JavascriptExecutor jse = (JavascriptExecutor) driver;
 
     public NachisleniyaTarifnieDokTests () throws Throwable {
         super();
@@ -53,8 +55,14 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
         //driver.findElement(By.xpath("//div[3]/input")).clear();
         //driver.findElement(By.xpath("//div[3]/input")).sendKeys(localdate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"))); //дата 01.09.2018
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
         System.out.println(localdate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"))); //форматируем дату
+
+        act.sendKeys(Keys.TAB).build().perform(); //tab переход в поле дата ДО
+        Thread.sleep(2000);
+
+        WebElement dateTo = driver.findElement(By.name("ch2_dt2")); //дата ОТ
+        dateTo.clear();
+        jse.executeScript("arguments[0].value='" + "15.10.2018" + "';", dateTo); //передаем дату в поле ОТ
     }
 
     @When("Клик Применить начисления")
@@ -62,21 +70,21 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
         //driver.findElement(By.xpath("//div[3]/div/div/div/div/div/div/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button")).click(); //клик по "Применить"
         driver.findElement(By.id("ext-comp-1274")).click(); //№2 Клик по кнопке Применить
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         app.waitForPageLoadComplete(driver);
         System.out.println("Нажали кнопку Применить");
     }
 
     @Then("Список документов загрузился")
     public void список_документов_загрузился() throws Throwable{
-        Thread.sleep(5000);
+        Thread.sleep(2000);
     }
 
     @Then("Выбрать счет")
     public void выбрать_счет() throws Throwable {
-        driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-of-type(5)")).click(); //выбираем второй элемент в списке документов счетов
+        driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-of-type(5)")).click(); //выбираем 5 элемент в списке документов счетов
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         app.waitForPageLoadComplete(driver);
     }
 

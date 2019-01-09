@@ -132,11 +132,11 @@
           <entry key="LICENSE" value="1" />
           <entry key="bat" value="1" />
           <entry key="class" value="2" />
-          <entry key="feature" value="458" />
+          <entry key="feature" value="461" />
           <entry key="gradle" value="40" />
           <entry key="gradlew" value="5" />
           <entry key="html" value="1" />
-          <entry key="java" value="1029" />
+          <entry key="java" value="1033" />
           <entry key="json" value="1" />
           <entry key="log" value="10" />
           <entry key="md" value="2" />
@@ -149,10 +149,10 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="Cucumber" value="319" />
+          <entry key="Cucumber" value="322" />
           <entry key="Groovy" value="40" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="1029" />
+          <entry key="JAVA" value="1033" />
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="24" />
           <entry key="Properties" value="29" />
@@ -164,9 +164,9 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="74" />
-          <entry key="feature" value="7334" />
+          <entry key="feature" value="7340" />
           <entry key="gradle" value="514" />
-          <entry key="java" value="32033" />
+          <entry key="java" value="32073" />
           <entry key="properties" value="116" />
           <entry key="substeps" value="27" />
           <entry key="xml" value="90" />
@@ -174,9 +174,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Cucumber" value="4411" />
+          <entry key="Cucumber" value="4417" />
           <entry key="Groovy" value="514" />
-          <entry key="JAVA" value="32032" />
+          <entry key="JAVA" value="32072" />
           <entry key="PLAIN_TEXT" value="74" />
           <entry key="Properties" value="116" />
           <entry key="RegExp" value="1" />
@@ -190,34 +190,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/PostavkiTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/runner/RunTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/appmanager/ApplicationManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="250" selection-start-line="250" selection-end-line="250" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1087#1088#0" expanded="true" />
-                <element signature="e#1127#1128#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -226,46 +203,43 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/features/Reestr.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/ReestrTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/RegressTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="46" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/features/Postavki.feature">
+        <entry file="file://$PROJECT_DIR$/src/test/java/features/Regress.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/PlatejTests.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/features/NachisleniyaTarifnieDok.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="123" column="35" selection-start-line="123" selection-start-column="35" selection-end-line="123" selection-end-column="35" />
+            <state relative-caret-position="119">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/NachisleniyaTarifnieDokTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="117" column="36" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -273,20 +247,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/Dok1CTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="108" />
+            <state relative-caret-position="187">
+              <caret line="20" selection-start-line="20" selection-end-line="21" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/utility/Hook.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -679,7 +644,6 @@
         <option value="$PROJECT_DIR$/src/test/java/features/SmokeHierarchyLimit.feature" />
         <option value="$PROJECT_DIR$/src/test/java/features/TarifnieGruppi.feature" />
         <option value="$PROJECT_DIR$/src/test/java/features/ZnacheniaStavok.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/stepDef/NachisleniyaTarifnieDokTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/stepDef/ReestrTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/stepDef/PMFMTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/stepDef/PolzovatelskieSpravochnikiTests.java" />
@@ -695,7 +659,6 @@
         <option value="$PROJECT_DIR$/src/test/java/stepDef/MonitoringRisksTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/stepDef/BPMTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/utility/Hook.java" />
-        <option value="$PROJECT_DIR$/src/test/java/features/NachisleniyaTarifnieDok.feature" />
         <option value="$PROJECT_DIR$/src/test/java/features/ContrAgents.feature" />
         <option value="$PROJECT_DIR$/src/test/java/stepDef/OPKMTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/features/BPM.feature" />
@@ -709,11 +672,13 @@
         <option value="$PROJECT_DIR$/src/test/java/stepDef/KaznacheystvoTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/features/Kaznacheystvo.feature" />
         <option value="$PROJECT_DIR$/src/test/java/stepDef/PlatejTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/features/Reestr.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/features/Regress.feature" />
         <option value="$PROJECT_DIR$/src/test/java/features/Platej.feature" />
         <option value="$PROJECT_DIR$/src/test/java/features/Postavki.feature" />
         <option value="$PROJECT_DIR$/src/test/java/stepDef/PostavkiTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/features/Reestr.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/features/Regress.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/features/NachisleniyaTarifnieDok.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/stepDef/NachisleniyaTarifnieDokTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/runner/RunTest.java" />
       </list>
     </option>
@@ -855,7 +820,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547035685160" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547041281381" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../factoring-tests" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -1148,34 +1113,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunTest - 2019.01.09 at 14h 15m 16s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2019.01.09 at 14h 18m 30s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2019.01.09 at 14h 39m 24s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2019.01.09 at 14h 41m 05s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2019.01.09 at 14h 42m 18s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2019.01.09 at 14h 48m 11s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2019.01.09 at 14h 58m 33s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2019.01.09 at 15h 01m 03s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RunTest - 2019.01.09 at 15h 04m 50s.xml">
-      <configuration name="RunTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="RunTest - 2019.01.09 at 15h 07m 24s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2019.01.09 at 15h 41m 57s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2019.01.09 at 15h 53m 56s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2019.01.09 at 15h 55m 50s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2019.01.09 at 16h 05m 21s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2019.01.09 at 16h 13m 44s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2019.01.09 at 16h 16m 54s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2019.01.09 at 16h 20m 23s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2019.01.09 at 16h 22m 16s.xml">
+      <configuration name="RunTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RunTest - 2019.01.09 at 16h 34m 08s.xml">
       <configuration name="RunTest" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -1189,10 +1154,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20522387" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20522387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1201,7 +1165,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49733475" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.57569295" visible="true" weight="0.39804772" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.57569295" visible="true" weight="0.39804772" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49573562" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1288,12 +1252,6 @@
           <line>52</line>
           <properties />
           <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/stepDef/NachisleniyaTarifnieDokTests.java</url>
-          <line>76</line>
-          <properties />
-          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/stepDef/PlatejTests.java</url>
@@ -1442,13 +1400,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/features/ClientManagerPage.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/features/ContrAgents.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1474,13 +1425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/features/NachisleniyaTarifnieDok.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -1702,20 +1646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/features/Regress.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/features/Platej.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1725,7 +1655,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/PlatejTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
+        <state relative-caret-position="-275">
           <caret line="123" column="35" selection-start-line="123" selection-start-column="35" selection-end-line="123" selection-end-column="35" />
         </state>
       </provider>
@@ -1734,16 +1664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/Dok1CTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="108" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1773,13 +1693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/features/Reestr.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/ReestrTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
@@ -1804,10 +1717,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/features/Reestr.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/features/Regress.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/features/NachisleniyaTarifnieDok.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/Dok1CTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" selection-start-line="20" selection-end-line="21" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/NachisleniyaTarifnieDokTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="117" column="36" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/runner/RunTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        <state relative-caret-position="306">
+          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
         </state>
       </provider>
     </entry>
