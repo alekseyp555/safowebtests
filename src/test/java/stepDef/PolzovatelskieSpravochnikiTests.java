@@ -31,7 +31,7 @@ public class PolzovatelskieSpravochnikiTests extends TestBase {
 
     @Given("Выбрать Пользовательские справочники")
     public void выбрать_Пользовательские_справочники() throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1067")).click(); //Клик на контрагенты
+        driver.findElement(By.id("ext-comp-1068")).click(); //Клик на контрагенты
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }

@@ -48,7 +48,6 @@ public class Hook {
 
     }
 
-
     public ApplicationManager getApp() {
        return app;
     }

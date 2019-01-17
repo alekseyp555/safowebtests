@@ -152,7 +152,7 @@ public class ApplicationManager {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ждем
         //WebElement kalendar = driver.findElement(By.cssSelector("#ext-comp-1860")); //локатор для таблицы
         //WebElement kalendar = driver.findElement(By.id("ext-comp-1862")); //не работает
-        WebElement kalendar = driver.findElement(By.xpath("//*[@id='ext-comp-1860']/ul/li/div/table/tbody")); //валидный xpath для календаря раньше был ext 1862!!!
+        WebElement kalendar = driver.findElement(By.xpath("//*[@id='ext-comp-1862']/ul/li/div/table/tbody")); //валидный xpath для календаря раньше был ext 1862!!!
         List<WebElement> rows = kalendar.findElements(By.tagName("tr")); //поиск строк
         List <WebElement> columns = kalendar.findElements(By.tagName("td")); //поиск столбцов
         for (WebElement cell: columns){

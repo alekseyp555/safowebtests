@@ -32,7 +32,7 @@ public class PMFMTests extends TestBase {
 
     @Given("Выбрать ПМФМ")
     public void выбрать_ПМФМ() throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1066")).click(); //Клик на ПМФМ в пуске
+        driver.findElement(By.id("ext-comp-1067")).click(); //Клик на ПМФМ в пуске
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }

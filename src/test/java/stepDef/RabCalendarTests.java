@@ -32,7 +32,7 @@ public class RabCalendarTests extends TestBase {
 
     @Given("Выбрать Рабочий календарь")
     public void выбрать_Рабочий_календарь() throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1068")).click(); //Клик на контрагенты
+        driver.findElement(By.id("ext-comp-1069")).click(); //Клик на контрагенты
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }

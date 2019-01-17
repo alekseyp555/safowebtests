@@ -32,7 +32,7 @@ public class ZnacheniaStavokTests extends TestBase {
 
     @Given("Выбрать Значения ставок")
     public void выбрать_Значения_ставок() throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1069")).click(); //Клик на ставки
+        driver.findElement(By.id("ext-comp-1070")).click(); //Клик на ставки
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }

@@ -33,7 +33,7 @@ public class TarifGrupTests extends TestBase {
 
     @Given("Выбрать Тарифные группы")
     public void выбрать_Тарифные_группы() throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1070")).click(); //Клик на тарифные группы
+        driver.findElement(By.id("ext-comp-1071")).click(); //Клик на тарифные группы
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }

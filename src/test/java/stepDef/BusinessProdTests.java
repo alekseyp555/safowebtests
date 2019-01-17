@@ -19,7 +19,6 @@ import static org.testng.Assert.assertEquals;
 
 public class BusinessProdTests extends TestBase {
 
-
     //private ChromeDriver driver;
         private WebDriver driver = app.getDriver();
 

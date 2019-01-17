@@ -33,7 +33,7 @@ public class FaktorChems extends TestBase {
 
     @Given("Выбрать факторинговые схемы")
     public void выбрать_факторинговые_схемы() throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1071")).click(); //Клик на фс
+        driver.findElement(By.id("ext-comp-1072")).click(); //Клик на фс
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }

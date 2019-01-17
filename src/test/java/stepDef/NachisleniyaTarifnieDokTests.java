@@ -35,14 +35,14 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
     }
 
     @Given("Выбрать Начисления и тарифные документы")
-    public void выбрать_Начисления_и_тарифные_документы() throws Throwable {
-        driver.findElement(By.id("ext-comp-1065")).click(); //Клик на Начисления и тарифные документы
+    public void selectNachisleniya() throws Throwable {
+        driver.findElement(By.id("ext-comp-1066")).click(); //Клик на Начисления и тарифные документы
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }
 
     @When("Выбрали дату {localdate}")
-        public void выбрали_дату(LocalDate localdate) throws InterruptedException {
+        public void selectDate(LocalDate localdate) throws InterruptedException {
         //driver.findElement(By.name("ch_dt1")).sendKeys("localdate"); //css locators
         driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).click(); //css locators
         driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).clear();
@@ -66,9 +66,9 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
     }
 
     @When("Клик Применить начисления")
-    public void клик_Применить_начисления() throws Throwable {
+    public void selectAcceptNachislenia() throws Throwable {
         //driver.findElement(By.xpath("//div[3]/div/div/div/div/div/div/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button")).click(); //клик по "Применить"
-        driver.findElement(By.id("ext-comp-1274")).click(); //№2 Клик по кнопке Применить
+        driver.findElement(By.id("ext-comp-1276")).click(); //№2 Клик по кнопке Применить
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(2000);
         app.waitForPageLoadComplete(driver);

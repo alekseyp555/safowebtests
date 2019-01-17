@@ -30,14 +30,14 @@ public class ContrAgentsTests extends TestBase{
     }
 
     @Given("Выбрать Контрагенты")
-    public void выбрать_Контрагенты() throws Throwable {
-        driver.findElement(By.id("ext-comp-1064")).click(); //Клик на контрагенты
+    public void selectContrAgents() throws Throwable {
+        driver.findElement(By.id("ext-comp-1065")).click(); //Клик на контрагенты
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }
 
     @When("Клик Применить")
-    public void клик_Применить() throws Throwable{
+    public void accept() throws Throwable{
         //driver.findElement(By.id("ext-comp-8760")).click(); //Применить не работает
         driver.findElement(By.xpath("//td[3]/table/tbody/tr[3]/td[2]")).click(); // №2 Клик "Применить"
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -45,12 +45,12 @@ public class ContrAgentsTests extends TestBase{
     }
 
     @Then("Список контрагентов появился")
-    public void список_контрагентов_появился() {
+    public void listContrAgents() {
         app.waitForPageLoadComplete(driver);
     }
 
     @Then("Выбрать контрагента")
-    public void выбрать_контрагента() throws Throwable {
+    public void selectContraAgentName() throws Throwable {
         driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")).click(); //выбираем второй элемент в списке КМ
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         Thread.sleep(5000);
@@ -62,7 +62,7 @@ public class ContrAgentsTests extends TestBase{
     }
 
     @Then("Клик Общие сведения, Дополнительно, Лимиты, Договора, Банковские реквизиты контрагента")
-    public void клик_Общие_сведения_Дополнительно_Лимиты_Договора_Банковские_реквизиты_контрагента() {
+    public void selectContrAgentsTab() {
         driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click(); //Клик на Дополнительно
         driver.findElement(By.xpath("//li[4]/a[2]")).click(); // Клик на Лимиты
         driver.findElement(By.xpath("//li[5]/a[2]/em")).click(); // Клик на Договора
