@@ -41,4 +41,9 @@ public class TestBase {
     public void click(By locator) {
         driver.findElement(locator).click();
     }
+
+
+    public void sleep(int millis) throws InterruptedException {
+        Thread.sleep(millis);
+    }
 }

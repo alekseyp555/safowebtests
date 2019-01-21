@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.yandex.qatools.allure.annotations.Description;
 
-@Description("Проверка модуля BPM")
+@Description("Проверка модуля Консолидированные группы")
 public class KonsolGruppiTests extends TestBase {
     private WebDriver driver = app.getDriver();
 
@@ -18,7 +18,7 @@ public class KonsolGruppiTests extends TestBase {
         Thread.sleep(5000);
         app.waitForPageLoadComplete(driver);
         app.selectPusk(); //клик пуск
-        app.selectSpravochnik(); //выбрать операции
+        app.selectSpravochnik(); //выбрать справочники
     }
 
     @Given("^Выбрать модуль Консолидированные группы$")
