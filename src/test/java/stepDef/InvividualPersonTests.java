@@ -29,7 +29,6 @@ public class InvividualPersonTests extends TestBase {
         sleep(5000);
       }
 
-
     @When("^Выбрать физическое лицо$")
     public void selectIndividualPersonList () {
         click(By.cssSelector(".x-btn-text.ico_m_filtr"));

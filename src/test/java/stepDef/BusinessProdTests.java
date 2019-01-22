@@ -24,58 +24,53 @@ public class BusinessProdTests extends TestBase {
 
         public BusinessProdTests () throws Throwable {
         super();
+        waitStandart();
         app.login();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        sleep(5000);
         app.waitForPageLoadComplete(driver);
         app.selectPusk(); //клик пуск
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.selectSpravochnik(); //выбор справочники
     }
 
     @Given("Выбрать Бизнес-продукты")
     public void selectBusinessProduct() throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1061")).click(); //Клик на БП
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        waitStandart();
+        click(By.id("ext-comp-1061")); //Клик на БП
         //driver.findElement(By.xpath("//div[12]/ul/li/a/span")).click(); //Xpath клик на бизнес продукты
-        Thread.sleep(5000);
+        sleep(5000);
     }
 
     @When("Выбрать Агентский факторинг без права регресса")
     public void selectAgentFactoringNoRegression() throws InterruptedException {
+        waitStandart();
         //driver.findElement(By.xpath("//div[3]/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div/div[2]")).click(); //клик по бизнес продукту
-        driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")).click(); //выбираем второй элемент в списке БП
+        click(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")); //выбираем второй элемент в списке БП
         //driver.findElement(By.cssSelector("div[class*=x-grid3-row]:first-child")).click(); //выбираем первый элемент в списке БП
         //driver.findElement(By.cssSelector("div[class*=x-grid3-row]:last-child")).click(); //выбираем последний элемент в списке БП
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
+        sleep(5000);
     }
 
     @Then("загрузились информация: описание продукта, схема обслуживания, сроки, тарифный план, лимитная политика, верификация")
     public void informationLoad() throws InterruptedException {
         // клики по вкладкам бизнес продуктам
         //driver.findElement(By.xpath("//span/span")).click();
-        driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        waitStandart();
+        click(By.xpath("//li[2]/a[2]/em/span/span"));
         app.waitForPageLoadComplete(driver);
-        driver.findElement(By.xpath("//li[3]/a[2]/em/span/span")).click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        click(By.xpath("//li[3]/a[2]/em/span/span"));
         app.waitForPageLoadComplete(driver);
-        driver.findElement(By.xpath("//li[4]/a[2]")).click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        click(By.xpath("//li[4]/a[2]"));
         app.waitForPageLoadComplete(driver);
-        driver.findElement(By.xpath("//li[5]/a[2]/em")).click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        app.waitForPageLoadComplete(driver);
+        click(By.xpath("//li[5]/a[2]/em"));
 
-        driver.findElement(By.xpath("//li[6]/a[2]/em")).click();
+        click(By.xpath("//li[6]/a[2]/em"));
         String tab6 = driver.findElement(By.xpath("//li[6]/a[2]/em")).getText();
         System.out.println("Вкладка " + tab6);
         assertEquals("Верификация", tab6); //проверяем вкладка Верификация
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        sleep(5000);
 
-        driver.findElement(By.xpath("//div[6]/div/div/div/div[2]/div[2]/div/div/div[2]/div/div/table/tbody/tr/td/div")).click(); //клик по элементу
+        click(By.xpath("//div[6]/div/div/div/div[2]/div[2]/div/div/div[2]/div/div/table/tbody/tr/td/div")); //клик по элементу
         /*driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Описание продукта'])[1]/following::span[2]")).click();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Схема обслуживания'])[1]/following::span[2]")).click();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Сроки'])[1]/following::span[2]")).click();
@@ -83,5 +78,4 @@ public class BusinessProdTests extends TestBase {
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Лимитная политика'])[1]/following::span[2]")).click();
         */
     }
-
 }

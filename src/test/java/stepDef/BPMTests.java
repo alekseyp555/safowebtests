@@ -11,8 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 
-import java.util.concurrent.TimeUnit;
-
 @Description("Проверка модуля BPM")
 @Epic("Epic")
 @Feature("Feature")
@@ -24,25 +22,25 @@ public class BPMTests extends TestBase {
 
     public BPMTests () throws Throwable {
         super();
+        waitStandart();
         app.login();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        sleep(5000);
         app.waitForPageLoadComplete(driver);
         app.selectPusk(); //клик пуск
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.selectOperaciy(); //выбрать операции
         //app.getOperationsHelper().selectOperaciy();
     }
 
     @Given("^Выбрать модуль BPM$")
     public void selectBPM() throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1045")).click(); //Клик на BPM
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
+        waitStandart();
+        click(By.id("ext-comp-1045")); //Клик на BPM
+        sleep(5000);
     }
 
     @When("^Выбрать все заявки$")
     public void selectAllQueries() throws InterruptedException {
+        waitStandart();
         app.zayavki_all();
         //String element = driver.findElement(By.cssSelector("div#ext-comp-2597> div > div > div > div > div > div > div > div:nth-child(5)")).getText();// css имя 5й компании в списке заявок
         //String element = driver.findElement(By.xpath("//div[@id='ext-comp-6017']/div/div/div/div/div/div/div[5]")).getText();//xpath имя 5й компании в списке заявок
@@ -51,8 +49,7 @@ public class BPMTests extends TestBase {
         //driver.findElement(By.xpath("//div[@id='ext-comp-6017']/div/div/div/div/div/div/div[5]")).click(); //xpath клик на 5 заявку
         //mainBPM(); //возврат на стартовую BPM
         //driver.findElement(By.xpath("//span/span")).click();
-        Thread.sleep(5000);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        sleep(5000);
         app.startPageOperations(); //возврат на стартовую BPM
         app.zayavki_change();
         app.startPageOperations(); //возврат на стартовую BPM
@@ -62,8 +59,6 @@ public class BPMTests extends TestBase {
 
     @Then("^Загрузились все заявки$")
     public void loadAllQueries() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
+        sleep(5000);
     }
-
 }

@@ -9,8 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Description;
 
-import java.util.concurrent.TimeUnit;
-
 @Description("Проверка модуля клиентский менеджер")
 @Feature("Справочники")
 @Test
@@ -20,66 +18,63 @@ public class ClientManagerPageTests extends TestBase {
 
     public ClientManagerPageTests () throws Throwable {
         super();
+        waitStandart();
         app.login();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        sleep(5000);
         app.waitForPageLoadComplete(driver);
         app.selectPusk(); //клик пуск
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.selectSpravochnik(); //выбор справочники
     }
 
     @Given("Выбрать клиентский менеджер")
-    public void выбрать_клиентский_менеджер() throws Throwable {
-        driver.findElement(By.id("ext-comp-1063")).click(); //Клик на клиентский менеджер
+    public void selectClientManager() throws Throwable {
+        waitStandart();
+        click(By.id("ext-comp-1063")); //Клик на клиентский менеджер
         //driver.findElement(By.cssSelector("[class*=x-menu-list-item]:nth-of-type(3)")); //Клик на клиентский менеджер
         //driver.findElement(By.xpath("//div[11]/ul/li[3]/a/span")).click(); //клик на менеджера
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        sleep(5000);
     }
 
     @When("выбрать менеджера")
-    public void выбрать_менеджера() throws Throwable {
-        driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")).click(); //выбираем второй элемент в списке КМ
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
+    public void selectManager() throws Throwable {
+        click(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")); //выбираем второй элемент в списке КМ
+        sleep(5000);
     }
 
     @Then("загрузились связки из сафо")
-    public void загрузились_связки_из_сафо() {
+    public void loadedInfo() {
         app.waitForPageLoadComplete(driver); //Ждем загрузку связок сафо
     }
 
     @Then("клик на связки в BPM\\/CRM")
-    public void клик_на_связки_в_BPM_CRM() throws Throwable {
-
-        driver.findElement(By.cssSelector("li:nth-of-type(2) > a:nth-of-type(2) > em > span > span")).click(); //css клик на связки BPM/CRM
+    public void clickInfoBPMCRM() throws Throwable {
+        waitStandart();
+        click(By.cssSelector("li:nth-of-type(2) > a:nth-of-type(2) > em > span > span")); //css клик на связки BPM/CRM
         //driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click(); // xpath клик на связки BPM/CRM
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         app.waitForPageLoadComplete(driver); //Ждем загрузку связок сафо
-        Thread.sleep(5000);
+        sleep(5000);
     }
 
     @Then("загрузились связки из BPM\\/CRM")
-    public void загрузились_связки_из_BPM_CRM() throws Throwable {
+    public void loadedInfoBPMCRM() {
+        waitStandart();
         //driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")).click(); //выбираем второй элемент в списке КМ
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         app.waitForPageLoadComplete(driver); //Ждем загрузку связок BPM/CRM
     }
 
     @Then("клик на контрагенты")
-    public void клик_на_контрагенты() throws Throwable {
-        driver.findElement(By.cssSelector("li:nth-of-type(3) > a:nth-of-type(2) > em > span > span")).click(); //css клик на связки BPM/CRM
+    public void clickContrAgent() throws Throwable {
+        waitStandart();
+        click(By.cssSelector("li:nth-of-type(3) > a:nth-of-type(2) > em > span > span")); //css клик на связки BPM/CRM
         //driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click(); // xpath клик на контрагенты
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
         app.waitForPageLoadComplete(driver); //Ждем загрузку связок BPM/CRM
-        Thread.sleep(5000);
+        sleep(5000);
     }
 
     @Then("загрузились контрагенты")
-    public void загрузились_контрагенты() {
+    public void loadedContrAgent() {
       //  driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")).click(); //выбираем второй элемент в списке КМ
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        waitStandart();
         app.waitForPageLoadComplete(driver); //Ждем загрузку связок контрагенты
     }
 }
