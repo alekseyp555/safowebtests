@@ -21,34 +21,33 @@ public class HierarchyLimitTests extends TestBase {
 
     public HierarchyLimitTests() throws Throwable {
         super();
+        waitStandart();
         app.login();
         app.waitForPageLoadComplete(driver);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        sleep(5000);
         app.selectPusk(); //клик пуск
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.selectSpravochnik(); //выбор справочники
     }
 
     @Given("Выбрать Иерархия лимитов")
-    public void выбрать_Иерархия_лимитов() throws Throwable {
-        driver.findElement(By.id("ext-comp-1062")).click(); //Клик на иерархия лимитов
+    public void selectHierarhyLimit() throws Throwable {
+        waitStandart();
+        click(By.id("ext-comp-1062")); //Клик на иерархия лимитов
         //driver.findElement(By.cssSelector("[class*=x-menu-list-item]:nth-of-type(2)")); //Клик на иерархия лимитов из пуска
         //driver.findElement(By.xpath("//div[11]/ul/li[2]/a/span")).click(); //Клик на иерархия лимитов из пуска
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        sleep(5000);
     }
 
     @When("выбрали лимит")
-    public void выбрали_лимит() {
+    public void selectHierarhyLimitList() {
         app.waitForPageLoadComplete(driver);
     }
 
     @Then("загрузились свойства лимитов: Общие, дополнительно")
-    public void загрузились_свойства_лимитов_Общие_дополнительно() throws Throwable {
+    public void loadedHierarhyLimitInfo() throws Throwable {
+        waitStandart();
         //driver.findElement(By.xpath("//tbody[6]/tr/td/a/span")).click(); //клик xpath на 6й элемент в таблице "ГСЗ Роснефть"
-        driver.findElement(By.cssSelector("tbody[class*=x-tree-node]:nth-of-type(6)")); //клик CSS на 6й элемент "ГСЗ Роснефть"
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        click(By.cssSelector("tbody[class*=x-tree-node]:nth-of-type(6)")); //клик CSS на 6й элемент "ГСЗ Роснефть"
+        sleep(5000);
     }
 }

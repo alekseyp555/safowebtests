@@ -1,6 +1,6 @@
 Feature: Login feature File
 
-@accept
+@demo
 
   Scenario: Login scenario for SAFO Web
     Given navigate to SAFO web page

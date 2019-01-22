@@ -24,23 +24,21 @@ public class PlatejTests extends TestBase {
     Actions act = new Actions(driver);
     JavascriptExecutor jse = (JavascriptExecutor)driver;
 
-
     public PlatejTests () throws Throwable {
         super();
         app.login();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        waitStandart();
+        sleep(5000);
         app.waitForPageLoadComplete(driver);
         app.selectPusk(); //клик пуск
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.selectOperaciy(); //выбрать операции
     }
 
     @Given("^Выбрать модуль Платежи$")
     public void selectPlateji () throws InterruptedException {
-        driver.findElement(By.id("ext-comp-1051")).click(); //Выбрать платежи
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
+        click(By.id("ext-comp-1051")); //Выбрать платежи
+        waitStandart();
+        sleep(5000);
     }
 
     @When("^Выбрать платеж$")

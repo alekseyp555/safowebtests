@@ -25,26 +25,25 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
 
     public NachisleniyaTarifnieDokTests () throws Throwable {
         super();
+        waitStandart();
         app.login();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        sleep(5000);
         app.waitForPageLoadComplete(driver);
         app.selectPusk(); //клик пуск
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.selectSpravochnik(); //выбор справочники
     }
 
     @Given("Выбрать Начисления и тарифные документы")
     public void selectNachisleniya() throws Throwable {
-        driver.findElement(By.id("ext-comp-1066")).click(); //Клик на Начисления и тарифные документы
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(5000);
+        waitStandart();
+        click(By.id("ext-comp-1066")); //Клик на Начисления и тарифные документы
+        sleep(5000);
     }
 
     @When("Выбрали дату {localdate}")
         public void selectDate(LocalDate localdate) throws InterruptedException {
         //driver.findElement(By.name("ch_dt1")).sendKeys("localdate"); //css locators
-        driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).click(); //css locators
+        click(By.cssSelector("div:nth-of-type(3) > input")); //css locators
         driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).clear();
         //driver.findElement(By.cssSelector("div:nth-of-type(3) > input")).sendKeys(localdate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"))); //дата 01.09.2018 смотреть фичу
 
@@ -54,7 +53,7 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
         //driver.findElement(By.xpath("//div[3]/input")).click(); //xpath locators
         //driver.findElement(By.xpath("//div[3]/input")).clear();
         //driver.findElement(By.xpath("//div[3]/input")).sendKeys(localdate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"))); //дата 01.09.2018
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        waitStandart();
         System.out.println(localdate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"))); //форматируем дату
 
         act.sendKeys(Keys.TAB).build().perform(); //tab переход в поле дата ДО
@@ -68,64 +67,63 @@ public class NachisleniyaTarifnieDokTests extends TestBase{
     @When("Клик Применить начисления")
     public void selectAcceptNachislenia() throws Throwable {
         //driver.findElement(By.xpath("//div[3]/div/div/div/div/div/div/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button")).click(); //клик по "Применить"
-        driver.findElement(By.id("ext-comp-1276")).click(); //№2 Клик по кнопке Применить
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        Thread.sleep(2000);
+        click(By.id("ext-comp-1276")); //№2 Клик по кнопке Применить
+        waitStandart();
+        sleep(2000);
         app.waitForPageLoadComplete(driver);
-        System.out.println("Нажали кнопку Применить");
     }
 
     @Then("Список документов загрузился")
-    public void список_документов_загрузился() throws Throwable{
-        Thread.sleep(2000);
+    public void loadedDocList() throws Throwable{
+        sleep(2000);
     }
 
     @Then("Выбрать счет")
-    public void выбрать_счет() throws Throwable {
-        driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-of-type(5)")).click(); //выбираем 5 элемент в списке документов счетов
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(2000);
+    public void selectAccount() throws Throwable {
+        click(By.cssSelector("div[class*=x-grid3-row]:nth-of-type(5)")); //выбираем 5 элемент в списке документов счетов
+        waitStandart();
+        sleep(2000);
         app.waitForPageLoadComplete(driver);
     }
 
     @Then("Загрузились комиссии за обработку документов")
-    public void загрузились_комиссии_за_обработку_документов() {
+    public void loadedCommisionsDoc() {
         app.waitForPageLoadComplete(driver);
     }
 
     @Then("Клик Излишне начисленные комиссии")
-    public void клик_Излишне_начисленные_комиссии() throws Throwable {
-        driver.findElement(By.cssSelector("li:nth-of-type(2) > a:nth-of-type(2) > em > span > span")).click(); //css клик на Излишне начисленные комиссии
+    public void selectNewCommisions() throws Throwable {
+        click(By.cssSelector("li:nth-of-type(2) > a:nth-of-type(2) > em > span > span")); //css клик на Излишне начисленные комиссии
         //driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click(); // xpath клик на Излишне начисленные комиссии
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
-        Thread.sleep(5000);
+        waitStandart();
+        sleep(5000);
         //waitForPageLoadComplete(driver); //Ждем загрузку комиссии
     }
 
     @Then("Выбрать компанию")
-    public void выбрать_компанию() throws Throwable {
+    public void selectCompany() throws Throwable {
         //driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-of-type(5)")).click(); //выбираем 5й элемент в списке документов счетов
         //driver.findElement(By.cssSelector("div[class*=x-grid3-row]:nth-child(2)")).click(); //выбираем 2й элемент в списке документов счетов
        // WebElement baseTable = driver.findElement(By.xpath("//div[5]/table/tbody/tr/td/div"));
        // List<WebElement> rows = baseTable.findElements(By.cssSelector("div[class*=x-grid3-row]"));
         //driver.findElement(By.xpath("//div[5]/table/tbody/tr/td/div")).click(); //xpath выбираем 5 элемент в таблице
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)=concat('ООО ', '\"', 'ЛУДИНГ', '\"', '')])[1]/following::div[3]")).click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)=concat('ООО ', '\"', 'ЛУДИНГ', '\"', '')])[1]/following::div[3]"));
+        waitStandart();
         Thread.sleep(5000);
         app.waitForPageLoadComplete(driver); //Ждем загрузку компании
     }
 
     @Then("Детализация загрузилась")
-    public void детализация_загрузилась() {
+    public void infoLoaded() {
         app.waitForPageLoadComplete(driver); //Ждем загрузку связок BPM/CRM
     }
 
     @Then("Клик на Начисления")
-    public void клик_на_Начисления() throws Throwable {
-        driver.findElement(By.cssSelector("li:nth-of-type(3) > a:nth-of-type(2) > em > span > span")).click(); //css клик на связки BPM/CRM
+    public void selectIncome() throws Throwable {
+        click(By.cssSelector("li:nth-of-type(3) > a:nth-of-type(2) > em > span > span")); //css клик на связки BPM/CRM
         //driver.findElement(By.xpath("//li[2]/a[2]/em/span/span")).click(); // xpath клик на контрагенты
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //ожидание загрузки страницы
+        waitStandart();
         app.waitForPageLoadComplete(driver); //Ждем загрузку связок BPM/CRM
-        Thread.sleep(5000);
+        sleep(5000);
     }
 }
